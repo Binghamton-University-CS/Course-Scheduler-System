@@ -2,10 +2,10 @@
 
 class Student {
   public:
-    Student(string first, string last, string userID, string bNumber);
+    Student(string BNumber, string userID, string first, string last);
   private:
-    string bNumber;
-    string first;
-    string last;
+    string BNumber;
     string userID;
-}
+    string first;
+    string last;  
+};
