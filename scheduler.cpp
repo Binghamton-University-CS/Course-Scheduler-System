@@ -36,11 +36,11 @@ void showPrompt() {
 }
 
 vector<string> getTokenListFromString(string input) {
-	vector<string> tokenList = {};
+	vector<string> tL = {};
 	string currentToken;
 	for (unsigned int i = 0; i < input.size(); i++) {
 		if (isspace(input[i]) != 0) {
-			tokenList.push_back(currentToken);
+			tL.push_back(currentToken);
 			currentToken = "";
 		}
 		else {
@@ -48,82 +48,82 @@ vector<string> getTokenListFromString(string input) {
 		}
 	}
 	if (currentToken != "") {
-		tokenList.push_back(currentToken);
+		tL.push_back(currentToken);
 	}
-	return tokenList;
+	return tL;
 }
 
-void processInputAndPrint(vector<string> tokenList) {
-	if (tokenList.size() == 0) {
+void processInputAndPrint(vector<string> tL) {
+	if (tL.size() == 0) {
 		cout << "Command not recognized, please try again." << endl;
 	}
-	else if (tokenList.at(0) == "quit") {
-		checkExtraArguments(tokenList.size(), 1);
+	else if (tL.at(0) == "quit") {
+		checkExtraArguments(tL.size(), 1);
 		exit(0);	
 	}
-	else if (tokenList.at(0) == "build") {
-		checkExtraArguments(tokenList.size(), 5);
-		if (tokenList.size() >= 5) {
-			if (checkCRN(tokenList.at(1)) {
-				if (checkDepartment(tokenList.at(2)) {
-					if (checkNumber(tokenList.at(3)) {
-						cout << "build course " << tokenList.at(1) << " " << tokenList.at(2) << " " << tokenList.at(3) << " "<< tokenList.at(4) << endl;
+	else if (tL.at(0) == "build") {
+		checkExtraArguments(tL.size(), 5);
+		if (tL.size() >= 5) {
+			if (checkCRN(tL.at(1)) {
+				if (checkDepartment(tL.at(2)) {
+					if (checkNumber(tL.at(3)) {
+						cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< tL.at(4) << endl;
 					}
 				}
 			}
 		}
-		checkNotEnoughArguments(tokenList.size(), 5);
+		checkNotEnoughArguments(tL.size(), 5);
 	}
-	else if (tokenList.at(0) == "cancel") {
-		checkExtraArguments(tokenList.size(), 2);
-		if (tokenList.size() >= 2) {
-			if (checkCRN(tokenList.at(1)) {
-				cout << "Success: cancelled course " << tokenList.at(1) << endl;
+	else if (tL.at(0) == "cancel") {
+		checkExtraArguments(tL.size(), 2);
+		if (tL.size() >= 2) {
+			if (checkCRN(tL.at(1)) {
+				cout << "Success: cancelled course " << tL.at(1) << endl;
 			}
 		}
-		checkNotEnoughArguments(tokenList.size(), 2);
+		checkNotEnoughArguments(tL.size(), 2);
 	}
-	else if (tokenList.at(0) == "enroll") {
-		checkExtraArguments(tokenList.size(), 5);
-		if (tokenList.size() >= 5) {
-			if (checkBNumber(tokenList.at(1))) {
-				if (checkUserID(tokenList.at(2))) {
-					if (checkFirst(tokenList.at(3))) {
-						if (checkLast(tokenList.at(4))) {
-							cout << "enroll student " << tokenList.at(1) << " (" << tokenList.at(2) << ") " << tokenList.at(4) << ", " << tokenList.at(3) << endl;
+	else if (tL.at(0) == "enroll") {
+		checkExtraArguments(tL.size(), 5);
+		if (tL.size() >= 5) {
+			if (checkBNumber(tL.at(1))) {
+				if (checkUserID(tL.at(2))) {
+					if (checkFirst(tL.at(3))) {
+						if (checkLast(tL.at(4))) {
+							cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << tL.at(4) << ", " << tL.at(3) << endl;
 						}
 					}
 				}
 			}
 		}
-		checkNotEnoughArguments(tokenList.size(), 5);
+		checkNotEnoughArguments(tL.size(), 5);
 	}
-	else if (tokenList.at(0) == "add") {
-		checkExtraArguments(tokenList.size(), 3);
-		if (tokenList.size() == 3) {
-			cout << "add student " << tokenList.at(1) << " into course " << tokenList.at(2) << endl;
+	else if (tL.at(0) == "add") {
+		checkExtraArguments(tL.size(), 3);
+		if (tL.size() == 3) {
+			cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
 		}
-		checkNotEnoughArguments(tokenList.size(), 3);
+		checkNotEnoughArguments(tL.size(), 3);
 	}
-	else if (tokenList.at(0) == "drop") {
-		checkExtraArguments(tokenList.size(), 3);
-		if (tokenList.size() == 3) {
-			cout << "remove student " << tokenList.at(1) << " from course " << tokenList.at(2) << endl;	
+	else if (tL.at(0) == "drop") {
+		checkExtraArguments(tL.size(), 3);
+		if (tL.size() == 3) {
+			cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;	
 		}
-		checkNotEnoughArguments(tokenList.size(), 3);
+		checkNotEnoughArguments(tL.size(), 3);
 	}
-	else if (tokenList.at(0) == "roster") {
-		checkExtraArguments(tokenList.size(), 2);
-		if (tokenList.size() == 2) {
-			cout << "roster of course " << tokenList.at(1) << endl;
+	else if (tL.at(0) == "roster") {
+		checkExtraArguments(tL.size(), 2);
+		if (tL.size() == 2) {
+			cout << "roster of course " << tL.at(1) << endl;
 		}
-		checkNotEnoughArguments(tokenList.size(), 2);
+		checkNotEnoughArguments(tL.size(), 2);
 	}
-	else if (tokenList.at(0) == "schedule") {
-		checkExtraArguments(tokenList.size(), 2);
-		if (tokenList.size() == 2) {
-			cout << "schedule of student " << tokenList.at(1) << endl;
+	else if (tL.at(0) == "schedule") {
+		checkExtraArguments(tL.size(), 2);
+		if (tL.size() == 2) {
+			cout << "schedule of student " << tL.at(1) << endl;
 		}
-		checkNotEnoughArguments(tokenList.size(), 2);
+		checkNotEnoughArguments(tL.size(), 2);
 	}
 }
