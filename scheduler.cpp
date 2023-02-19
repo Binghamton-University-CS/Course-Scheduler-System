@@ -16,12 +16,10 @@ bool regexCheck(string s, string e);
 
 int main() {
 	string input;
-	vector<string> list;
 	while (true){
 		showPrompt();
 		getline(cin, input);
-		list = getTokenListFromString(input);
-		processInputAndPrint(list);
+		processInputAndPrint(getTokenListFromString(input));
 	}
 	return 0;
 }
