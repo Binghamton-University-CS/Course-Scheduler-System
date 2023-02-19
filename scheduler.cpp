@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include "Student.cpp"
 #include "Course.cpp"
-#include "VerifyFunctions.cpp"
+#include "ExtraFunctions.cpp"
 
 using namespace std;
 
