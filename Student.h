@@ -2,7 +2,7 @@
 
 class Student {
   public:
-    Student();
+    Student(string first, string last, string userID, string bNumber);
   private:
     string bNumber;
     string first;
