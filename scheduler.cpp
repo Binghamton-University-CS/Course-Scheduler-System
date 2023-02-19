@@ -24,6 +24,18 @@ int main() {
 	return 0;
 }
 
+void showPrompt() {
+   cout << "Enter [\"build <crn> <department> <number> <name>\"" << endl <<
+                "       \"cancel <crn>\"" << endl <<
+                "       \"enroll <bnumber> <userid> <first> <last>\"" << endl <<
+                "       \"add <bnumber> <crn>\"" << endl <<
+                "       \"drop <bnumber> <crn>\"" << endl <<
+                "       \"roster <crn>\"" << endl <<
+                "       \"schedule <bnumber>\"" << endl <<
+                "       \"quit\"]" << endl <<
+                ": ";
+}
+
 vector<string> getTokenListFromString(string input) {
 	vector<string> tokenList = {};
 	string currentToken;
@@ -92,17 +104,4 @@ void processInputAndPrint(vector<string> tokenList) {
 			cout << "schedule of student " << tokenList.at(1) << endl;
 		}
 	}
-	
-}
-
-void showPrompt() {
-   cout << "Enter [\"build <crn> <department> <number> <name>\"" << endl <<
-                "       \"cancel <crn>\"" << endl <<
-                "       \"enroll <bnumber> <userid> <first> <last>\"" << endl <<
-                "       \"add <bnumber> <crn>\"" << endl <<
-                "       \"drop <bnumber> <crn>\"" << endl <<
-                "       \"roster <crn>\"" << endl <<
-                "       \"schedule <bnumber>\"" << endl <<
-                "       \"quit\"]" << endl <<
-                ": ";
 }
