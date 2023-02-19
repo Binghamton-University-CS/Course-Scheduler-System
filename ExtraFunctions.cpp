@@ -22,7 +22,7 @@ bool regexCheck(string s, string e) {
 }
 
 bool checkCRN(string s) {
-	if (!regexCheck(s, "\d{6}")) {
+	if (!regexCheck(s, "^\d{6}$")) {
 		cout << "Input Error: illegal CRN" << endl;
 		return false;
 	}
@@ -30,7 +30,7 @@ bool checkCRN(string s) {
 }
 
 bool checkDepartment(string s) {
-	if (!regexCheck(s, "[A-Z][A-Z][A-Z]?[A-Z]?") {
+	if (!regexCheck(s, "^[A-Z][A-Z][A-Z]?[A-Z]?$")) {
 		cout << "Input Error: illegal department" << endl;
 		return false;
 	}
@@ -38,7 +38,7 @@ bool checkDepartment(string s) {
 }
 
 bool checkNumber(string s) {
-	if (!regexCheck(s, "[1-6][0-9][0-9]") {
+	if (!regexCheck(s, "^[1-6][0-9][0-9]$")) {
 		cout << "Input Error: illegal course number" << endl;
 		return false;
 	}
@@ -46,9 +46,24 @@ bool checkNumber(string s) {
 }
 
 bool checkBNumber(string s) {
-	if (!regexCheck(s, "B[0-9]{8}") {
+	if (!regexCheck(s, "^B[0-9]{8}$")) {
 		cout << "Input Error: illegal B number" << endl;
 		return false;
 	}
+	return true;
+}
+
+bool checkUserID(string s) {
+	if (!regexCheck(s, "^[a-zA-Z][a-zA-Z0-9]*$")) {
+		cout << "Input Error: illegal user ID" << endl;
+	}
+	return true;
+}
+
+bool checkFirst(string s) {
+	return true;
+}
+
+bool checkLast(string s) {
 	return true;
 }
