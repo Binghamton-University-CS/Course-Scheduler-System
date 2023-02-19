@@ -8,7 +8,7 @@ class Course {
       this->department = department;
       this->number = number;
       this->name = name;
-      BNumbers = new MichaelList<string>();
+      studentList = new MichaelList<string>();
     }
     addStudent(string BNumber) {
       studentList.add(BNumber);
