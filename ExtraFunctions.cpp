@@ -1,5 +1,18 @@
 #include <regex>
 #include <string>
+#include <iostream>
+
+void checkExtraArguments(int val, int max) {
+	if (val > max) {
+		cout << "Warning: ignoring extra argument(s)" << endl;
+	}
+}
+
+void checkNotEnoughArguments(int val, int min) {
+	if (val < min) {
+		cout << "Input Error: too few arguments" << endl;
+	}
+}
 
 bool regexCheck(string s, string e) {
 	if (regex_match(s, regex(e))) {
