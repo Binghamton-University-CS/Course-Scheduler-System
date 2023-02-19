@@ -9,10 +9,9 @@
 
 using namespace std;
 
+void showPrompt();
 vector<string> getTokenListFromString(string input);
 void processInputAndPrint(vector<string>);
-void showPrompt();
-bool regexCheck(string s, string e);
 
 int main() {
 	string input;
