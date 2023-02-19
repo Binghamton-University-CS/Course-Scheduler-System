@@ -101,28 +101,40 @@ void processInputAndPrint(vector<string> tL) {
 	else if (tL.at(0) == "add") {
 		checkExtraArguments(tL.size(), 3);
 		if (tL.size() == 3) {
-			cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
+			if (checkBNumber(tL.at(1))) {
+				if (checkCRN(tL.at(2))) {
+					cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
+				}
+			}
 		}
 		checkNotEnoughArguments(tL.size(), 3);
 	}
 	else if (tL.at(0) == "drop") {
 		checkExtraArguments(tL.size(), 3);
 		if (tL.size() == 3) {
-			cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;	
+			if (checkBNumber(tL.at(1))) {
+				if (checkCRN(tL.at(2))) {
+					cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;
+				}
+			}
 		}
 		checkNotEnoughArguments(tL.size(), 3);
 	}
 	else if (tL.at(0) == "roster") {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
-			cout << "roster of course " << tL.at(1) << endl;
+			if (checkCRN(tL.at(1))) {
+				cout << "roster of course " << tL.at(1) << endl;
+			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
 	}
 	else if (tL.at(0) == "schedule") {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
-			cout << "schedule of student " << tL.at(1) << endl;
+			if (checkBNumber(tL.at(1))) {
+				cout << "schedule of student " << tL.at(1) << endl;
+			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
 	}
