@@ -44,3 +44,11 @@ bool checkNumber(string s) {
 	}
 	return true;
 }
+
+bool checkBNumber(string s) {
+	if (!regexCheck(s, "B[0-9]{8}") {
+		cout << "Input Error: illegal B number" << endl;
+		return false;
+	}
+	return true;
+}
