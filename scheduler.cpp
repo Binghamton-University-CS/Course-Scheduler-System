@@ -58,10 +58,16 @@ void processInputAndPrint(vector<string> tokenList) {
 		cout << "Command not recognized, please try again." << endl;
 	}
 	else if (tokenList.at(0) == "quit") {
+		if (tokenList.size() > 1) {
+			cout << "Warning: ignoring extra argument(s)" << endl;
+		}
 		exit(0);	
 	}
 	else if (tokenList.at(0) == "build") {
-		if (tokenList.size() == 5) {
+		if (tokenList.size() > 5) {
+			cout << "Warning: ignoring extra argument(s)" << endl;
+		}
+		if (tokenList.size() >= 5) {
 			if (checkCRN(tokenList.at(1)) {
 				if (checkDepartment(tokenList.at(2)) {
 					if (checkNumber(tokenList.at(3)) {
@@ -70,18 +76,34 @@ void processInputAndPrint(vector<string> tokenList) {
 				}
 			}
 		}
+		if (tokenList.size() < 5) {
+			cout << "Input Error: too few arguments" << endl;
+		}
 	}
 	else if (tokenList.at(0) == "cancel") {
-		if (checkCRN(tokenList.at(1)) {
-			if (tokenList.size() == 2) {
+		if (tokenList.size() > 2) {
+			cout << "Warning: ignoring extra argument(s)" << endl;
+		}
+		if (tokenList.size() >= 2) {
+			if (checkCRN(tokenList.at(1)) {
 				cout << "Success: cancelled course " << tokenList.at(1) << endl;
 			}
 		}
+		if (tokenList.size() < 2) {
+			cout << "Input Error: too few arguments" << endl;
+		}
 	}
 	else if (tokenList.at(0) == "enroll") {
-		if (tokenList.size() == 5) {
+		if (tokenList.size() > 5) {
+			cout << "Warning: ignoring extra argument(s)" << endl;
+		}
+		if (tokenList.size() >= 5) {
 			cout << "enroll student " << tokenList.at(1) << " (" << tokenList.at(2) << ") " << tokenList.at(4) << ", " << tokenList.at(3) << endl;
 		}
+		if (tokenList.size() < 5) {
+			cout << "Input Error: too few arguments" << endl;
+		}
+		
 	}
 	else if (tokenList.at(0) == "add") {
 		if (tokenList.size() == 3) {
