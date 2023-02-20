@@ -110,7 +110,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cLP->find(tL.at(2)).add_____
+					cLP->find(tL.at(2)).addStudent(tL.at(1))
 					cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
 				}
 			}
@@ -122,6 +122,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
+					cLP.find(tL.at(2)).dropStudent(tL.at(1));
 					cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;
 				}
 			}
