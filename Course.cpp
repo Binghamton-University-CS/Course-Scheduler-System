@@ -1,5 +1,13 @@
 #include <string>
+#ifndef MICHAELLIST
+#define MICHAELLIST
 #include "MichaelList.cpp"
+#endif
+
+#ifndef STUDENT
+#define STUDENT
+#include "Student.cpp"
+#endif
 
 class Course {
   public:
@@ -10,16 +18,16 @@ class Course {
       this->name = name;
       studentList = new MichaelList<string>();
     }
-    addStudent(string BNumber) {
-      studentList.add(BNumber);
+    addStudent(Student student) {
+      studentList.add(student);
     }
-    dropStudent(string BNumber) {
-      studentList.remove(BNumber);
+    dropStudent(Student student) {
+      studentList.remove(student);
     }
   private:
     string CRN;
     string department;
     string number;
     string name;
-    MichaelList<string> studentList;
+    MichaelList<Student> studentList;
 };
