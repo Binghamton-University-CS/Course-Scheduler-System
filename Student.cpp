@@ -8,9 +8,16 @@ class Student {
       this->first = first;
       this->last = last;
     }
+    void addCourse(Course course) {
+      courseList.add(course);
+    }
+    void removeCourse(Course course) {
+      courseList.remove(course);
+    }
   private:
     string BNumber;
     string userID;
     string first;
-    string last;  
+    string last; 
+    MichaelList<Course> courseList;
 };
