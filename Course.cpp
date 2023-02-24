@@ -16,13 +16,16 @@ class Course {
       this->department = department;
       this->number = number;
       this->name = name;
-      studentList = new MichaelList<string>();
+      studentList = new MichaelList<Student>();
     }
     addStudent(Student student) {
       studentList.add(student);
     }
     dropStudent(Student student) {
       studentList.remove(student);
+    }
+    void printStudents() {
+      ;
     }
   private:
     string CRN;
