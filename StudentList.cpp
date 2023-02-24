@@ -6,7 +6,7 @@
 class StudentList {
   public:
     StudentList() {
-      array = new T[size];
+      array = new Student[size];
     }
     add(Student student) {
       if (lastIndex == size - 1) {
