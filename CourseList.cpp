@@ -1,3 +1,8 @@
+#ifndef COURSE
+#define COURSE
+#include "Course.cpp"
+#endif
+
 class CourseList {
   public:
     CourseList() {
