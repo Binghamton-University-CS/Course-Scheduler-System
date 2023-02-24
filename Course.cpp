@@ -18,10 +18,10 @@ class Course {
       this->name = name;
       studentList = new MichaelList<Student>();
     }
-    addStudent(Student student) {
+    string addStudent(Student student) {
       studentList.add(student);
     }
-    dropStudent(Student student) {
+    string dropStudent(Student student) {
       studentList.remove(student);
     }
     void printStudents() {
