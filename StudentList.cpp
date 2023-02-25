@@ -50,3 +50,11 @@ int StudentList::find(Student student) {
       }
       return -1;
     }
+
+bool StudentList::checkStudentExistsByBNumber(string BNumber) {
+      ; //edit this
+}
+
+Student StudentList::getStudentByBNumber(string BNumber) {
+      ; // edit this
+}
