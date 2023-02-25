@@ -19,13 +19,12 @@ Course::Course(string CRN, string department, string number, string name) {
       this->name = name;
       studentList = new MichaelList<Student>();
     }
-    string addStudent(Student student) {
+string Course::addStudent(Student student) {
       studentList.add(student);
     }
-    string dropStudent(Student student) {
+string Course::dropStudent(Student student) {
       studentList.remove(student);
     }
-    void printStudents() {
+void Course::printStudents() {
       ;
-    }
 }
