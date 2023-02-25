@@ -10,18 +10,18 @@
 #include "MichaelList.h"
 #endif
 
-using namespace std;
+//using namespace std;
 
 class Student {
   public:
-    Student(string BNumber, string userID, string first, string last);
+    Student(std::string BNumber, std::string userID, std::string first, std::string last);
     void addCourse(Course course);
     void removeCourse(Course course);
     void printCourses();
   private:
-    string BNumber;
-    string userID;
-    string first;
-    string last; 
+    std::string BNumber;
+    std::string userID;
+    std::string first;
+    std::string last; 
     MichaelList<Course> courseList;
 };
