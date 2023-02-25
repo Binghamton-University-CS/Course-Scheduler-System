@@ -1,6 +1,7 @@
 #ifndef COURSE_H
 #define COURSE_H
-#include "Course.h"
+//#include "Course.h"
+class Course;
 #endif
 
 class CourseList {
