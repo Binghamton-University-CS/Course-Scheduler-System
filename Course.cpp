@@ -1,11 +1,11 @@
 #ifndef STUDENT
 #define STUDENT
-#include "Student.cpp"
+#include "Student.h"
 #endif
 
 #ifndef STUDENTLIST
 #define STUDENTLIST
-#include "StudentList.cpp"
+#include "StudentList.h"
 #endif
 
 class Course {
