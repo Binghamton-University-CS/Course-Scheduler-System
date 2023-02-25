@@ -6,7 +6,7 @@
 class StudentList {
   public:
     StudentList();
-    bool add(Student student)'
+    bool add(Student student);
     bool remove(Student student);
     int find(Student student);
   
