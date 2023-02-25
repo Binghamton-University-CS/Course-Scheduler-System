@@ -10,6 +10,10 @@ class StudentList {
     }
   
     bool add(Student student) {
+      if (this->find(student) != -1) {
+        return false;
+      }
+      
       if (lastIndex == size - 1) {
         T* temp = new T[size * 2];
         for (int i = 0; i < lastIndex; i++) {
@@ -21,6 +25,7 @@ class StudentList {
       }
       lastIndex++;
       array[lastIndex] = student;
+      return true;
     }
   
     bool remove(Student student) {
