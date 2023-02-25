@@ -25,7 +25,7 @@ string Course::addStudent(string student) {
 string Course::dropStudent(string student) {
       stringList.remove(student);
     }
-void Course::printStudents() {
+void Course::printRoster() {
       cout << "CRN: " << CRN << endl;
       cout << "Students: " << studentList.size();
       studentList.printAll();
