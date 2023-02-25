@@ -5,9 +5,9 @@
 #include "Course.h"
 #endif
 
-#ifndef COURSELIST_H
-#define COURSELIST_H
-#include "CourseList.h"
+#ifndef MICHAELLIST_H
+#define MICHAELLIST_H
+#include "MichaelList.h"
 #endif
 
 class Student {
@@ -21,5 +21,5 @@ class Student {
     string userID;
     string first;
     string last; 
-    CourseList courseList;
+    MichaelList<Course> courseList;
 };
