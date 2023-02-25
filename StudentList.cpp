@@ -1,6 +1,6 @@
 #ifndef STUDENT
 #define STUDENT
-#include "Student.cpp"
+#include "Student.h"
 #endif
 
 class StudentList {
