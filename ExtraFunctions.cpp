@@ -2,6 +2,16 @@
 #include <string>
 #include <iostream>
 
+#ifndef COURSE_H
+#define COURSE_H
+#include "Course.h"
+#endif
+
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Student.h"
+#endif
+
 using namespace std;
 
 void printCourseRoster(string CRN, Course* courseList, Student* studentList) {
