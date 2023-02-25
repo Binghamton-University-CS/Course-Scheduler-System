@@ -3,9 +3,17 @@
 #include <vector>
 #include <cctype>
 #include <cstdlib>
-#include "Student.cpp"
-#include "Course.cpp"
 #include "ExtraFunctions.cpp"
+
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Student.h"
+#endif
+
+#ifndef COURSE_H
+#define COURSE_H
+#include "Course.h"
+#endif
 
 using namespace std;
 
