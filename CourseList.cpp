@@ -3,12 +3,11 @@
 #include "Course.h"
 #endif
 
-class CourseList {
-  public:
-    CourseList() {
+CourseList::CourseList() {
       array = new Course[size];
-    }
-    bool add(Course course) {
+}
+
+bool CourseList::add(Course course) {
       if (this->find(course) != -1) {
         return false;
       }
@@ -26,7 +25,8 @@ class CourseList {
       array[lastIndex] = course;
       true;
     }
-    bool remove(Course course) {
+
+bool CourseList::remove(Course course) {
       int index = this->find(course);
       if (index == -1) {
         return false;
@@ -37,7 +37,7 @@ class CourseList {
       return true;
     }
     
-    int find(Course course) {
+int CourseList::find(Course course) {
       for (int i = 0; i < lastIndex; i++) {
         if (course == array[i]) {
           return i;
@@ -45,9 +45,3 @@ class CourseList {
       }
       return -1;
     }
-    
-  private:
-    Course* array;
-    int size = 100;
-    int lastIndex;
-};
