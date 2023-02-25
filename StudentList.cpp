@@ -1,15 +1,18 @@
-#ifndef STUDENT
-#define STUDENT
+#ifndef STUDENT_H
+#define STUDENT_H
 #include "Student.h"
 #endif
 
-class StudentList {
-  public:
-    StudentList() {
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
+#include "StudentList.h"
+#endif
+
+StudentList::StudentList() {
       array = new Student[size];
     }
   
-    bool add(Student student) {
+bool StudentList::add(Student student) {
       if (this->find(student) != -1) {
         return false;
       }
@@ -28,7 +31,7 @@ class StudentList {
       return true;
     }
   
-    bool remove(Student student) {
+bool StudentList::remove(Student student) {
       int index = this->find(student);
       if (index == -1) {
         return false;
@@ -39,7 +42,7 @@ class StudentList {
       return true;
     }
   
-    int find(Student student) {
+int StudentList::find(Student student) {
       for (int i = 0; i < lastIndex; i++) {
         if (student == array[i]) {
           return i;
@@ -47,9 +50,3 @@ class StudentList {
       }
       return -1;
     }
-  
-  private:
-    Student* array;
-    int size = 100;
-    int lastIndex;
-};
