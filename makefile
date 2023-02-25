@@ -22,10 +22,10 @@ $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraF
 $(OBJ)/scheduler.o: scheduler.cpp Student.cpp Course.cpp ExtraFunctions.cpp StudentList.cpp CourseList.cpp
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
 
-$(OBJ)/Course.o: Course.cpp Student.cpp
+$(OBJ)/Course.o: Course.cpp Student.cpp StudentList.cpp
 	$(CC) $(FLAGS) -c Course.cpp -o $@
 	
-$(OBJ)/Student.o: Student.cpp Course.cpp
+$(OBJ)/Student.o: Student.cpp Course.cpp CourseList.cpp
 	$(CC) $(FLAGS) -c Student.cpp -o $@
 
 $(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
