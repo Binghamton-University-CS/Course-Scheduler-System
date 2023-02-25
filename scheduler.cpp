@@ -3,7 +3,11 @@
 #include <vector>
 #include <cctype>
 #include <cstdlib>
+
+#ifndef EXTRAFUNCTIONS
+#define EXTRAFUNCTIONS
 #include "ExtraFunctions.cpp"
+#endif
 
 #ifndef STUDENT_H
 #define STUDENT_H
