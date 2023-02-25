@@ -47,3 +47,8 @@ int StringList::find(string s) {
       }
       return -1;
     }
+void StringList::printAll() {
+      for (int i = 0; i < size; i++) {
+            cout << array[i] << endl;
+      }
+}
