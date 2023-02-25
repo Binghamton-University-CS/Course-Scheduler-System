@@ -26,5 +26,7 @@ string Course::dropStudent(string student) {
       stringList.remove(student);
     }
 void Course::printStudents() {
-      ;
+      cout << "CRN: " << CRN << endl;
+      cout << "Students: " << studentList.size();
+      studentList.printAll();
 }
