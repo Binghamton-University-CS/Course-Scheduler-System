@@ -19,22 +19,22 @@ all: $(BIN)/$(EXE)
 $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o
 	$(CC) $(FLAGS) $(OBJ)/scheduler.o -o $@
 
-$(OBJ)/scheduler.o: scheduler.cpp Student.cpp Course.cpp ExtraFunctions.cpp StudentList.cpp CourseList.cpp
+$(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.h StudentList.h CourseList.h
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
 
-$(OBJ)/Course.o: Course.cpp Student.cpp StudentList.cpp
+$(OBJ)/Course.o: Course.cpp Course.h Student.h StudentList.h
 	$(CC) $(FLAGS) -c Course.cpp -o $@
 	
-$(OBJ)/Student.o: Student.cpp Course.cpp CourseList.cpp
+$(OBJ)/Student.o: Student.cpp Student.h Course.h CourseList.h
 	$(CC) $(FLAGS) -c Student.cpp -o $@
 
 $(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
 	$(CC) $(FLAGS) -c ExtraFunctions.cpp -o $@
 
-$(OBJ)/StudentList.o: StudentList.cpp Student.cpp Course.cpp
+$(OBJ)/StudentList.o: StudentList.cpp StudentList.h Student.h Course.h
 	$(CC) $(FLAGS) -c StudentList.cpp -o $@
 
-$(OBJ)/CourseList.o: CourseList.cpp Course.cpp Student.cpp
+$(OBJ)/CourseList.o: CourseList.cpp CourseList.h Course.h Student.h
 	$(CC) $(FLAGS) -c CourseList.cpp -o $@
 
 #$(OBJ)/MichaelList.o: MichaelList.cpp
