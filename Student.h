@@ -1,5 +1,10 @@
 #include <string>
 
+#ifndef STRINGLIST_H
+#define STRINGLIST_H
+#include "StringList.h"
+#endif
+
 using namespace std;
 
 class Student {
