@@ -12,8 +12,8 @@ CourseList::CourseList() {
       array = new Course[size];
 }
 
-bool CourseList::add(Course course) {
-      if (this->find(course) != -1) {
+bool CourseList::add(Course* course) {
+      if (this->find(*course) != -1) {
         return false;
       }
       
@@ -27,12 +27,12 @@ bool CourseList::add(Course course) {
         size *= 2;
       }
       lastIndex++;
-      array[lastIndex] = course;
+      array[lastIndex] = *course;
       true;
     }
 
-bool CourseList::remove(Course course) {
-      int index = this->find(course);
+bool CourseList::remove(Course* course) {
+      int index = this->find(*course);
       if (index == -1) {
         return false;
       }
@@ -42,9 +42,9 @@ bool CourseList::remove(Course course) {
       return true;
     }
     
-int CourseList::find(Course course) {
+int CourseList::find(Course* course) {
       for (int i = 0; i < lastIndex; i++) {
-        if (course == array[i]) {
+        if (*course == array[i]) {
           return i;
         }
       }
