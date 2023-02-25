@@ -5,8 +5,8 @@
 #include "Course.h"
 #endif
 
-#ifndef MICHAELLIST_H
-#define MICHAELLIST_H
+#ifndef COURSELIST_H
+#define COURSELIST_H
 #include "MichaelList.h"
 #endif
 
