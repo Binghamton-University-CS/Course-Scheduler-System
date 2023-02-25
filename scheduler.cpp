@@ -145,7 +145,8 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
 			if (checkCRN(tL.at(1))) {
-				cout << "roster of course " << tL.at(1) << endl;
+				//cout << "roster of course " << tL.at(1) << endl;
+				courseList->printAll();
 			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
