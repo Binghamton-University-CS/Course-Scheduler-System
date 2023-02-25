@@ -9,7 +9,7 @@ MichaelList::MichaelList() {
     }
 
 template <class T>
-void MichaelList::add(T val) {
+bool MichaelList::add(T val) {
       if (this->find(val) != -1) {
         return false;
       }
