@@ -8,10 +8,14 @@ class CourseList {
     CourseList() {
       array = new Course[size];
     }
-    add(Course course) {
+    bool add(Course course) {
+      if (this->find(course) != -1) {
+        return false;
+      }
+      
       if (lastIndex == size - 1) {
         T* temp = new T[size * 2];
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < lastIndex; i++) {
           temp[i] = array[i];
         }
         delete array;
@@ -20,10 +24,28 @@ class CourseList {
       }
       lastIndex++;
       array[lastIndex] = course;
+      true;
     }
-    remove(Course course) {
-      ;
+    bool remove(Course course) {
+      int index = this->find(course);
+      if (index == -1) {
+        return false;
+      }
+      for (int i = index; i < lastIndex - 1; i++) {
+        array[i] = array[i + 1];
+      }
+      return true;
     }
+    
+    int find(Course course) {
+      for (int i = 0; i < lastIndex; i++) {
+        if (course == array[i]) {
+          return i;
+        }
+      }
+      return -1;
+    }
+    
   private:
     Course* array;
     int size = 100;
