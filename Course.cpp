@@ -1,5 +1,10 @@
 #include <string>
 
+#ifndef COURSE_H
+#define COURSE_H
+#include "Course.h"
+#endif
+
 #ifndef STUDENT_H
 #define STUDENT_H
 #include "Student.h"
@@ -8,11 +13,6 @@
 #ifndef STUDENTLIST_H
 #define STUDENTLIST_H
 #include "StudentList.h"
-#endif
-
-#ifndef COURSE_H
-#define COURSE_H
-#include "Course.h"
 #endif
 
 using namespace std;
