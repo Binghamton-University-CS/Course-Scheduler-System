@@ -25,6 +25,7 @@ void Student::addCourse(Course course) {
 void Student::removeCourse(Course course) {
       StringList.remove(course);
     }
-void Student::printCourses() {
-      ;
+void Student::printSchedule() {
+      cout << "Student: " << BNumber << ": " << first;
+      courseList.printAll();
     }
