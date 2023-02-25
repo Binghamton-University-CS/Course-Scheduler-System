@@ -14,15 +14,15 @@
 
 using namespace std;
 
-void printCourseRoster(string CRN, Course* courseList, Student* studentList) {
-	Course course = courseList->find(CRN);
-	MichaelList<string> BNumbers = course.getStudents();
-	cout << "CRN: " << CRN << endl;
-	cout << "Students: " << BNumbers.getSize() << endl;
-	for (int i = 0; i < BNumbers.getSize(); i++) {
-		cout << BNumbers.at(i) << studentList->find(BNumbers.at(i)).getName() << endl;
-	}
-}
+//void printCourseRoster(string CRN, Course* courseList, Student* studentList) {
+//	Course course = courseList->find(CRN);
+//	MichaelList<string> BNumbers = course.getStudents();
+//	cout << "CRN: " << CRN << endl;
+//	cout << "Students: " << BNumbers.getSize() << endl;
+//	for (int i = 0; i < BNumbers.getSize(); i++) {
+//		cout << BNumbers.at(i) << studentList->find(BNumbers.at(i)).getName() << endl;
+//	}
+//}
 
 void printStudentSchedule(string BNumber, Course* courseList, Student* studentList) {
 	Student student = studentList->find(BNumber);
