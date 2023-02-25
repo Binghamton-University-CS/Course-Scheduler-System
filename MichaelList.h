@@ -2,7 +2,7 @@ template <class T>
 class MichaelList {
   public:
     MichaelList();
-    add(T val);
+    bool add(T val);
     bool remove(T val);
     int find(T val);
   private:
