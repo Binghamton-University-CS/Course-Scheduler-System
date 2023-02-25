@@ -5,33 +5,24 @@
 #include "Course.h"
 #endif
 
-#ifndef COURSELIST_H
-#define COURSELIST_H
-#include "CourseList.h"
+#ifndef MICHAELLIST_H
+#define MICHAELLIST_H
+#include "MichaelList.h"
 #endif
 
-class Student {
-  public:
-    Student(string BNumber, string userID, string first, string last) {
+Student::Student(string BNumber, string userID, string first, string last) {
       this->BNumber = BNumber;
       this->userID = userID;
       this->first = first;
       this->last = last;
-      courseList = new CourseList();
+      courseList = new MichaelList<Course>();
     }
-    void addCourse(Course course) {
+void Student::addCourse(Course course) {
       courseList.add(course);
     }
-    void removeCourse(Course course) {
+void Student::removeCourse(Course course) {
       courseList.remove(course);
     }
-    void printCourses() {
+void Student::printCourses() {
       ;
     }
-  private:
-    string BNumber;
-    string userID;
-    string first;
-    string last; 
-    CourseList courseList;
-};
