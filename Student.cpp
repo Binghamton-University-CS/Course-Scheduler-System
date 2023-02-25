@@ -1,13 +1,18 @@
 #include <string>
 
-#ifndef COURSE_H
-#define COURSE_H
-#include "Course.h"
-#endif
+//#ifndef COURSE_H
+//#define COURSE_H
+//#include "Course.h"
+//#endif
 
-#ifndef COURSELIST_H
-#define COURSELIST_H
-#include "CourseList.h"
+//#ifndef COURSELIST_H
+//#define COURSELIST_H
+//#include "CourseList.h"
+//#endif
+
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Student.h"
 #endif
 
 using namespace std;
