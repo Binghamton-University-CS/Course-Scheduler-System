@@ -1,5 +1,5 @@
-#ifndef COURSE
-#define COURSE
+#ifndef COURSE_H
+#define COURSE_H
 #include "Course.h"
 #endif
 
