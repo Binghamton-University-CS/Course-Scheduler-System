@@ -1,10 +1,10 @@
-#ifndef STUDENT
-#define STUDENT
+#ifndef STUDENT_H
+#define STUDENT_H
 #include "Student.h"
 #endif
 
-#ifndef STUDENTLIST
-#define STUDENTLIST
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
 #include "StudentList.h"
 #endif
 
