@@ -1,3 +1,5 @@
+#include <string>
+
 #ifndef STUDENT_H
 #define STUDENT_H
 #include "Student.h"
@@ -7,6 +9,8 @@
 #define MICHAELLIST_H
 #include "MichaelList.h"
 #endif
+
+using namespace std;
 
 Course::Course(string CRN, string department, string number, string name) {
       this->CRN = CRN;
