@@ -1,7 +1,7 @@
-//#ifndef STUDENT_H
-//#define STUDENT_H
-//#include "Student.h"
-//#endif
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Student.h"
+#endif
 
 #ifndef STUDENTLIST_H
 #define STUDENTLIST_H
