@@ -12,7 +12,7 @@ class Student {
     Student(string BNumber, string userID, string first, string last);
     void addCourse(string course);
     void removeCourse(string course);
-    void printCourses();
+    void printSchedule();
   private:
     string BNumber;
     string userID;
