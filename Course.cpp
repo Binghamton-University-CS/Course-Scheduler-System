@@ -17,12 +17,12 @@ Course::Course(string CRN, string department, string number, string name) {
       this->department = department;
       this->number = number;
       this->name = name;
-      studentList = new StudentList();
+      stringList = new StringList();
     }
-string Course::addStudent(Student student) {
+string Course::addStudent(string student) {
       studentList.add(student);
     }
-string Course::dropStudent(Student student) {
+string Course::dropStudent(string student) {
       studentList.remove(student);
     }
 void Course::printStudents() {
