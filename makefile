@@ -24,15 +24,21 @@ $(OBJ)/scheduler.o: scheduler.cpp
 
 $(OBJ)/Course.o: Course.cpp
 	$(CC) $(FLAGS) -c Course.cpp -o $@
+	
+$(OBJ)/Student.o: Student.cpp
+	$(CC) $(FLAGS) -c Student.cpp -o $@
 
 $(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
 	$(CC) $(FLAGS) -c ExtraFunctions.cpp -o $@
 
-$(OBJ)/MichaelList.o: MichaelList.cpp
-	$(CC) $(FLAGS) -c MichaelList.cpp -o $@
+$(OBJ)/StudentList.o: StudentList.cpp Student.cpp Course.cpp
+	$(CC) $(FLAGS) -c StudentList.cpp -o $@
 
-$(OBJ)/Student.o: Student.cpp
-	$(CC) $(FLAGS) -c Student.cpp -o $@
+$(OBJ)/CourseList.o: CourseList.cpp Course.cpp Student.cpp
+	$(CC) $(FLAGS) -c CourseList.cpp -o $@
+
+#$(OBJ)/MichaelList.o: MichaelList.cpp
+#	$(CC) $(FLAGS) -c MichaelList.cpp -o $@
 
 
 
