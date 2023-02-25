@@ -1,7 +1,7 @@
-//#ifndef COURSE_H
-//#define COURSE_H
-//#include "Course.h"
-//#endif
+#ifndef COURSE_H
+#define COURSE_H
+#include "Course.h"
+#endif
 
 #ifndef COURSELIST_H
 #define COURSELIST_H
