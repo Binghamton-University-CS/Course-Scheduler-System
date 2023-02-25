@@ -9,6 +9,7 @@ class CourseList {
     bool add(Course course);
     bool remove(Course course);
     int find(Course course);
+    Course getCourseByCRN(string CRN);
   private:
     Course* array;
     int size;
