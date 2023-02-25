@@ -145,7 +145,12 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
 			if (checkCRN(tL.at(1))) {
-				cL.getCourseByCRN(tL.at(1)).printRoster();
+				if (cl.checkCourseExistsByCRN(tL.at(1))) {
+					cL.getCourseByCRN(tL.at(1)).printRoster();
+				}
+				else {
+					; //print crn not in courselist
+				}
 			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
