@@ -1,11 +1,9 @@
-template <class T>
-class MichaelList {
-  public:
-    MichaelList() {
+
+MichaelList::MichaelList() {
       array = new T[size];
     }
     
-    add(T val) {
+void MichaelList::add(T val) {
       if (this->find(val) != -1) {
         return false;
       }
@@ -22,7 +20,7 @@ class MichaelList {
       array[lastIndex] = val;
     }
     
-    bool remove(T val) {
+bool MichaelList::remove(T val) {
       int index = this->find(val);
       if (index == -1) {
         return false;
@@ -41,8 +39,3 @@ class MichaelList {
       }
       return -1;
     }
-  private:
-    T* array;
-    int size = 100;
-    int lastIndex;
-};
