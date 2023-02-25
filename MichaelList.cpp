@@ -1,8 +1,14 @@
+#ifndef MICHAELIST_H
+#define MICHAELIST_H
+#include "MichaelList.h"
+#endif
 
+template <class T>
 MichaelList::MichaelList() {
       array = new T[size];
     }
-    
+
+template <class T>
 void MichaelList::add(T val) {
       if (this->find(val) != -1) {
         return false;
@@ -19,7 +25,8 @@ void MichaelList::add(T val) {
       lastIndex++;
       array[lastIndex] = val;
     }
-    
+
+template <class T>
 bool MichaelList::remove(T val) {
       int index = this->find(val);
       if (index == -1) {
@@ -30,8 +37,9 @@ bool MichaelList::remove(T val) {
       }
       return true;
     }
-    
-    int find(T val) {
+
+template <class T>
+int MichaelList::find(T val) {
       for (int i = 0; i < lastIndex; i++) {
         if (val == array[i]) {
           return i;
