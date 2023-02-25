@@ -16,7 +16,7 @@ OBJ = obj
 
 all: $(BIN)/$(EXE)
 
-$(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFucntions.o
+$(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o
 	$(CC) $(FLAGS) $(OBJ)/scheduler.o -o $@
 
 $(OBJ)/scheduler.o: scheduler.cpp Student.cpp Course.cpp ExtraFunctions.cpp StudentList.cpp CourseList.cpp
