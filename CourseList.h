@@ -6,9 +6,9 @@
 class CourseList {
   public:
     CourseList();
-    bool add(Course& course);
-    bool remove(Course& course);
-    int find(Course& course);
+    bool add(Course course);
+    bool remove(Course course);
+    int find(Course course);
   private:
     Course* array;
     int size;
