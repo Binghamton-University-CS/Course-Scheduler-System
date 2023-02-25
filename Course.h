@@ -5,9 +5,9 @@
 #include "Student.h"
 #endif
 
-#ifndef MICHAELLIST_H
-#define MICHAELLIST_H
-#include "MichaelList.h"
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
+#include "StudentList.h"
 #endif
 
 using namespace std;
@@ -23,5 +23,5 @@ class Course {
     string department;
     string number;
     string name;
-    MichaelList<Student> studentList;
+    StudentList studentList;
 };
