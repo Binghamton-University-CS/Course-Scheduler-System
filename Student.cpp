@@ -5,9 +5,9 @@
 #include "Course.cpp"
 #endif
 
-#ifndef MICHAELLIST
-#define MICHAELLIST
-#include "MichaelList.cpp"
+#ifndef COURSELIST
+#define COURSELIST
+#include "CourseList.cpp"
 #endif
 
 class Student {
@@ -17,7 +17,7 @@ class Student {
       this->userID = userID;
       this->first = first;
       this->last = last;
-      courseList = new MichaelList<Course>();
+      courseList = new CourseList();
     }
     void addCourse(Course course) {
       courseList.add(course);
@@ -33,5 +33,5 @@ class Student {
     string userID;
     string first;
     string last; 
-    MichaelList<Course> courseList;
+    CourseList courseList;
 };
