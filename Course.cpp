@@ -20,10 +20,10 @@ Course::Course(string CRN, string department, string number, string name) {
       stringList = new StringList();
     }
 string Course::addStudent(string student) {
-      studentList.add(student);
+      stringList.add(student);
     }
 string Course::dropStudent(string student) {
-      studentList.remove(student);
+      stringList.remove(student);
     }
 void Course::printStudents() {
       ;
