@@ -5,9 +5,9 @@
 #include "Student.h"
 #endif
 
-#ifndef MICHAELLIST_H
-#define MICHAELLIST_H
-#include "MichaelList.h"
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
+#include "StudentList.h"
 #endif
 
 using namespace std;
@@ -17,7 +17,7 @@ Course::Course(string CRN, string department, string number, string name) {
       this->department = department;
       this->number = number;
       this->name = name;
-      studentList = new MichaelList<Student>();
+      studentList = new StudentList();
     }
 string Course::addStudent(Student student) {
       studentList.add(student);
