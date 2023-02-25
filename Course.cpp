@@ -1,12 +1,11 @@
-#include <string>
-#ifndef MICHAELLIST
-#define MICHAELLIST
-#include "MichaelList.cpp"
-#endif
-
 #ifndef STUDENT
 #define STUDENT
 #include "Student.cpp"
+#endif
+
+#ifndef STUDENTLIST
+#define STUDENTLIST
+#include "StudentList.cpp"
 #endif
 
 class Course {
@@ -16,7 +15,7 @@ class Course {
       this->department = department;
       this->number = number;
       this->name = name;
-      studentList = new MichaelList<Student>();
+      studentList = new StudentList();
     }
     string addStudent(Student student) {
       studentList.add(student);
@@ -32,5 +31,5 @@ class Course {
     string department;
     string number;
     string name;
-    MichaelList<Student> studentList;
+    StudentList studentList;
 };
