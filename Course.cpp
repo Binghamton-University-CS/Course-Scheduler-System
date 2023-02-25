@@ -5,14 +5,9 @@
 #include "Course.h"
 #endif
 
-#ifndef STUDENT_H
-#define STUDENT_H
-#include "Student.h"
-#endif
-
-#ifndef STUDENTLIST_H
-#define STUDENTLIST_H
-#include "StudentList.h"
+#ifndef STRINGLIST_H
+#define STRINGLIST_H
+#include "StringList.h"
 #endif
 
 using namespace std;
