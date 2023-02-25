@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 void printCourseRoster(string CRN, Course* courseList, Student* studentList) {
 	Course course = courseList->find(CRN);
 	MichaelList<string> BNumbers = course.getStudents();
