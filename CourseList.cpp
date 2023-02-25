@@ -3,6 +3,11 @@
 #include "Course.h"
 #endif
 
+#ifndef COURSELIST_H
+#define COURSELIST_H
+#include "CourseList.h"
+#endif
+
 CourseList::CourseList() {
       array = new Course[size];
 }
