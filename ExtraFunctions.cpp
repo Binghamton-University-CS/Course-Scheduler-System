@@ -24,9 +24,9 @@ using namespace std;
 //	}
 //}
 
-void printStudentSchedule(string BNumber, Course* courseList, Student* studentList) {
-	Student student = studentList->find(BNumber);
-}
+//void printStudentSchedule(string BNumber, Course* courseList, Student* studentList) {
+//	Student student = studentList->find(BNumber);
+//}
 
 void checkExtraArguments(int val, int max) {
 	if (val > max) {
