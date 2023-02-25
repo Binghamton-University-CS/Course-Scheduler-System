@@ -19,13 +19,13 @@ all: $(BIN)/$(EXE)
 $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFucntions.o
 	$(CC) $(FLAGS) $(OBJ)/scheduler.o -o $@
 
-$(OBJ)/scheduler.o: scheduler.cpp
+$(OBJ)/scheduler.o: scheduler.cpp Student.cpp Course.cpp ExtraFunctions.cpp StudentList.cpp CourseList.cpp
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
 
-$(OBJ)/Course.o: Course.cpp
+$(OBJ)/Course.o: Course.cpp Student.cpp
 	$(CC) $(FLAGS) -c Course.cpp -o $@
 	
-$(OBJ)/Student.o: Student.cpp
+$(OBJ)/Student.o: Student.cpp Course.cpp
 	$(CC) $(FLAGS) -c Student.cpp -o $@
 
 $(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
@@ -39,8 +39,6 @@ $(OBJ)/CourseList.o: CourseList.cpp Course.cpp Student.cpp
 
 #$(OBJ)/MichaelList.o: MichaelList.cpp
 #	$(CC) $(FLAGS) -c MichaelList.cpp -o $@
-
-
 
 tar:	clean
 	tar cvvf $(TARFILE) $(REPODIR)
