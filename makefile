@@ -19,7 +19,7 @@ all: $(BIN)/$(EXE)
 $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o
 	$(CC) $(FLAGS) $(OBJ)/scheduler.o -o $@
 
-$(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.h StudentList.h CourseList.h
+$(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.cpp StudentList.h CourseList.h
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
 
 $(OBJ)/Course.o: Course.cpp Course.h Student.h StudentList.h
