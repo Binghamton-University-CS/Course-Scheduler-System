@@ -1,6 +1,6 @@
 #ifndef COURSE
 #define COURSE
-#include "Course.cpp"
+#include "Course.h"
 #endif
 
 class CourseList {
