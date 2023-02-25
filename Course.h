@@ -1,3 +1,5 @@
+#include <string>
+
 #ifndef STUDENT_H
 #define STUDENT_H
 #include "Student.h"
@@ -7,6 +9,8 @@
 #define MICHAELLIST_H
 #include "MichaelList.h"
 #endif
+
+using namespace std;
 
 class Course {
   public:
