@@ -12,7 +12,11 @@ class Course {
     Course(string CRN, string department, string number, string name);
     string addStudent(string student);
     string dropStudent(string student);
-    void printStudents();
+    void printRoster() {
+      cout << "CRN: " << CRN << endl;
+      cout << "Students: " << studentList.size();
+      studentList.printAll();
+    }
   private:
     string CRN;
     string department;
