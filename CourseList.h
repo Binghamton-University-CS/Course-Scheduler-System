@@ -11,6 +11,7 @@ class CourseList {
     int find(Course course);
     bool checkCourseExistsByCRN(string CRN);
     Course getCourseByCRN(string CRN);
+    void printAll();
   private:
     Course* array;
     int size;
