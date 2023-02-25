@@ -51,6 +51,15 @@ int CourseList::find(Course course) {
       return -1;
     }
 
+bool checkCourseExistsByCRN(string CRN) {
+      for (int i = 0; i < lastIndex; i++) {
+            if (array[i].CRN == CRN) {
+                  return true;
+            }
+      }
+      return false;
+}
+
 Course CourseList::getCourseByCRN(string CRN) {
       for (int i = 0; i < lastIndex; i++) {
             if (array[i].CRN == CRN) {
