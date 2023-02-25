@@ -1,9 +1,8 @@
 #include <string>
 
 #ifndef COURSE_H
-//#define COURSE_H
-//#include "Course.h"
-class Course;
+#define COURSE_H
+#include "Course.h"
 #endif
 
 #ifndef MICHAELLIST_H
