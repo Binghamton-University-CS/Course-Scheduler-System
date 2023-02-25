@@ -8,9 +8,7 @@
 #include "MichaelList.h"
 #endif
 
-class Course {
-  public:
-    Course(string CRN, string department, string number, string name) {
+Course::Course(string CRN, string department, string number, string name) {
       this->CRN = CRN;
       this->department = department;
       this->number = number;
@@ -26,10 +24,4 @@ class Course {
     void printStudents() {
       ;
     }
-  private:
-    string CRN;
-    string department;
-    string number;
-    string name;
-    MichaelList<Student> studentList;
-};
+}
