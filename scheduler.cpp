@@ -27,12 +27,12 @@ void processInputAndPrint(vector<string>);
 
 int main() {
 	string input;
-	Course* courseListPointer = new MichaelList<Course>();
-	Student* studentListPointer = new MichaelList<Student>();
+	CourseList courseList = new CourseList();
+	StudentList studentList = new StudentList();
 	while (true){
 		showPrompt();
 		getline(cin, input);
-		processInputAndPrint(getTokenListFromString(input), courseListPointer, studentListPointer);
+		processInputAndPrint(getTokenListFromString(input), courseList, studentList);
 	}
 	return 0;
 }
@@ -67,7 +67,7 @@ vector<string> getTokenListFromString(string input) {
 	return tL;
 }
 
-void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
+void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	if (tL.size() == 0) {
 		cout << "Command not recognized, please try again." << endl;
 	}
@@ -82,7 +82,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 				if (checkDepartment(tL.at(2)) {
 					if (checkNumber(tL.at(3)) {
 						if (checkName(tL.at(4)) {
-							cLP->add(new Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
+							cL.add(new Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
 							cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< tL.at(4) << endl;
 						}
 					}
@@ -108,7 +108,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 				if (checkUserID(tL.at(2))) {
 					if (checkFirst(tL.at(3))) {
 						if (checkLast(tL.at(4))) {
-							sLP->add(tL.at(1), tL.at(2), tL.at(3), tL.at(4));
+							sL.add(tL.at(1), tL.at(2), tL.at(3), tL.at(4));
 							cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << tL.at(4) << ", " << tL.at(3) << endl;
 						}
 					}
@@ -134,7 +134,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cLP.find(tL.at(2)).dropStudent(tL.at(1));
+					cL.find(tL.at(2)).dropStudent(tL.at(1));
 					cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;
 				}
 			}
@@ -145,8 +145,7 @@ void processInputAndPrint(vector<string> tL, Course* cLP, Student* sLP) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
 			if (checkCRN(tL.at(1))) {
-				//cout << "roster of course " << tL.at(1) << endl;
-				courseList->printAll();
+				cL.findByCRN(tL.at(1)).printRoster();
 			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
