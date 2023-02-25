@@ -2,12 +2,12 @@
 
 #ifndef COURSE
 #define COURSE
-#include "Course.cpp"
+#include "Course.h"
 #endif
 
 #ifndef COURSELIST
 #define COURSELIST
-#include "CourseList.cpp"
+#include "CourseList.h"
 #endif
 
 class Student {
