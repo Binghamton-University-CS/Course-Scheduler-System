@@ -159,7 +159,12 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() == 2) {
 			if (checkBNumber(tL.at(1))) {
-				cout << "schedule of student " << tL.at(1) << endl;
+				if (sL.checkStudentExistsByBNumber(tL.at(1))) {
+					sL.getStudentByBNumber(tL.at(1)).printSchedule();
+				}
+				else {
+					; // print student not in studentlist
+				}
 			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
