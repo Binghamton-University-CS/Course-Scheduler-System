@@ -33,7 +33,7 @@ bool StringList::add(string s) {
       }
       lastIndex++;
       array[lastIndex] = s;
-      true;
+      return true;
     }
 
 bool StringList::remove(string s) {
