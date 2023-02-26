@@ -91,7 +91,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkCRN(tL.at(1))) {
 				if (checkDepartment(tL.at(2))) {
 					if (checkNumber(tL.at(3))) {
-						if (checkName(tL.at(4))) {
+						if (checkCourseName(tL.at(4))) {
 							cL.add(new Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
 							cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< tL.at(4) << endl;
 						}
@@ -105,7 +105,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() >= 2) {
 			if (checkCRN(tL.at(1))) {
-				cLP->remove(tL.at(1));
+				cL.remove(tL.at(1));
 				cout << "Success: cancelled course " << tL.at(1) << endl;
 			}
 		}
@@ -132,7 +132,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cLP->find(tL.at(2)).addStudent(tL.at(1))
+					cL.find(tL.at(2)).addStudent(tL.at(1))
 					cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
 				}
 			}
