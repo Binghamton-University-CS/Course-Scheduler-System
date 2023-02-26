@@ -10,6 +10,7 @@ using namespace std;
 
 StringList::StringList() {
       size = 1;
+      currentQuantity = 0;
       array = new string[size];
 }
 
@@ -24,15 +25,15 @@ bool StringList::add(string s) {
       
       if (lastIndex == size - 1) {
         string* temp = new string[size * 2];
-        for (int i = 0; i < lastIndex; i++) {
+        for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
         }
-        delete array;
+        delete[] array;
         array = temp;
         size *= 2;
       }
-      lastIndex++;
-      array[lastIndex] = s;
+      currentQuantity++;
+      array[currentQuantity] = s;
       return true;
     }
 
@@ -41,14 +42,14 @@ bool StringList::remove(string s) {
       if (index == -1) {
         return false;
       }
-      for (int i = index; i < lastIndex - 1; i++) {
+      for (int i = index; i < currentQuantity - 1; i++) {
         array[i] = array[i + 1];
       }
       return true;
     }
     
 int StringList::find(string s) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
         if (s == array[i]) {
           return i;
         }
