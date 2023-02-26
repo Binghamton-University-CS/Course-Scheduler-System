@@ -18,7 +18,7 @@ CourseList::~CourseList() {
 }
 
 bool CourseList::add(Course course) {
-      if (this->find(course) != -1) {
+      if (this->find(course.getCRN()) != -1) {
         return false;
       }
       
@@ -49,7 +49,7 @@ bool CourseList::remove(string CRN) {
     
 int CourseList::find(string CRN) {
       for (int i = 0; i < lastIndex; i++) {
-        if (CRN == array[i].CRN) {
+        if (CRN == array[i].getCRN()) {
           return i;
         }
       }
@@ -58,7 +58,7 @@ int CourseList::find(string CRN) {
 
 bool CourseList::checkExists(string CRN) {
       for (int i = 0; i < lastIndex; i++) {
-            if (array[i].CRN == CRN) {
+            if (array[i].getCRN() == CRN) {
                   return true;
             }
       }
@@ -67,7 +67,7 @@ bool CourseList::checkExists(string CRN) {
 
 Course* CourseList::getCourse(string CRN) {
       for (int i = 0; i < lastIndex; i++) {
-            if (array[i].CRN == CRN) {
+            if (array[i].getCRN() == CRN) {
                   return &array[i]
             }
       }
