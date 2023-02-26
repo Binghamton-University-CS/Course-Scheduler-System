@@ -10,7 +10,6 @@ using namespace std;
 class Course {
   public:
     Course(string CRN, string department, string number, string name);
-    ~Course();
     string addStudent(string student);
     string dropStudent(string student);
     void printRoster();
