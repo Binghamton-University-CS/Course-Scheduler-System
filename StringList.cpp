@@ -52,3 +52,7 @@ void StringList::printAll() {
             cout << array[i] << endl;
       }
 }
+
+int StringList::getSize() {
+      return size;
+}
