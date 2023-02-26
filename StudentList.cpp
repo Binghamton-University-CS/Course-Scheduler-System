@@ -18,7 +18,7 @@ bool StudentList::add(Student student) {
       }
       
       if (lastIndex == size - 1) {
-        T* temp = new T[size * 2];
+        Student* temp = new Student[size * 2];
         for (int i = 0; i < lastIndex; i++) {
           temp[i] = array[i];
         }
