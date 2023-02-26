@@ -13,13 +13,7 @@
 
 using namespace std;
 
-Course::Course() {
-      this->CRN = "";
-      this->department = "";
-      this->number = "";
-      this->name = "";
-      studentList = StringList();
-    }
+Course::Course() {}
 
 Course::Course(string CRN, string department, string number, string name) {
       this->CRN = CRN;
