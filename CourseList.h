@@ -6,6 +6,7 @@
 class CourseList {
   public:
     CourseList();
+    ~CourseList();
     bool add(Course course);
     bool remove(string CRN);
     int find(string CRN);
