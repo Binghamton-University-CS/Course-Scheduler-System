@@ -11,7 +11,7 @@
 CourseList::CourseList() {
       size = 1;
       currentQuantity = 0;
-      array = new Course[size];
+      array = new Course*[size];
       for (int i = 0; i < size; i++) {
             array[i] = nullptr;
       }
@@ -27,7 +27,7 @@ bool CourseList::add(Course course) {
       }
       
       if (currentQuantity == size) {
-        Course* temp = new Course[size * 2];
+        Course* temp = new Course*[size * 2];
         for (int i_ = 0; i_ < size * 2; i_++) {
               temp[i_] = nullptr;
         }
