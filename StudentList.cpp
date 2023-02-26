@@ -60,10 +60,10 @@ bool StudentList::checkExists(string BNumber) {
       return false;
 }
 
-//Student StudentList::getStudentByBNumber(string BNumber) {
-//      for (int i = 0; i < lastIndex; i++) {
-//            if (array[i].BNumber == BNumber) {
-//                  return array[i]
-//            }
-//      }
-//}
+Student* StudentList::getStudent(string BNumber) {
+      for (int i = 0; i < lastIndex; i++) {
+            if (array[i].BNumber == BNumber) {
+                  return &array[i]
+            }
+      }
+}
