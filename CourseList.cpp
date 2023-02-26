@@ -71,4 +71,6 @@ Course* CourseList::getCourse(string CRN) {
                   return &array[i];
             }
       }
+      //only here to remove warning
+      return &array[i];
 }
