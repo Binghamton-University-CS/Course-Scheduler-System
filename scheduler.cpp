@@ -91,17 +91,13 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkCRN(tL.at(1))) {
 				if (checkDepartment(tL.at(2))) {
 					if (checkNumber(tL.at(3))) {
-						//get remaining string of tL
-						string courseName = "";
-						for (int _i = 4; _i < (int) tL.size(); _i++) {
-							courseName += tL.at(_i);
-							if (_i != tL.size() - 1) {
-								courseName += " ";
-							}
+						string courseName = getRemainingString(tL);
+						if (cL.add(Course(tL.at(1), tL.at(2), tL.at(3), courseName))) {
+							cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< courseName << endl;
 						}
-
-						cL.add(Course(tL.at(1), tL.at(2), tL.at(3), courseName));
-						cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< courseName << endl;
+						else {
+							//print CRN already exists
+						}
 					}
 				}
 			}
@@ -128,13 +124,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkUserID(tL.at(2))) {
 					//get remaining string of tL
-					string last = "";
-					for (int i_ = 4; i_ < (int) tL.size(); i_++) {
-						last += tL.at(i_);
-						if (i_ != tL.size() - 1) {
-							last += " ";
-						}
-					}
+					string last = getRemainingString(tL);
 					
 					if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), last))) {
 						cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << last << ", " << tL.at(3) << endl;
