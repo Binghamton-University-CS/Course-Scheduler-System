@@ -15,7 +15,7 @@ bool StringList::add(string s) {
       }
       
       if (lastIndex == size - 1) {
-        T* temp = new T[size * 2];
+        string* temp = new string[size * 2];
         for (int i = 0; i < lastIndex; i++) {
           temp[i] = array[i];
         }
