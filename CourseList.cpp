@@ -39,7 +39,7 @@ bool CourseList::add(Course course) {
         size *= 2;
       }
       currentQuantity++;
-      array[currentQuantity - 1] = course;
+      *array[currentQuantity - 1] = course;
       return true;
     }
 
