@@ -17,7 +17,7 @@ Course::Course(string CRN, string department, string number, string name) {
       this->department = department;
       this->number = number;
       this->name = name;
-      stringList = new StringList();
+      stringList = StringList();
     }
 string Course::addStudent(string student) {
       stringList.add(student);
