@@ -93,10 +93,10 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					if (checkNumber(tL.at(3))) {
 						//get remaining string of tL
 						string courseName = "";
-						for (int i_ = 4; i_ < tL.size(); i_++) {
-							last += tL.at(i_);
-							if (i_ != tL.size() - 1) {
-								last += " ";
+						for (int _i = 4; _i < (int) tL.size(); _i++) {
+							courseName += tL.at(_i);
+							if (_i != tL.size() - 1) {
+								courseName += " ";
 							}
 						}
 
@@ -129,7 +129,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 				if (checkUserID(tL.at(2))) {
 					//get remaining string of tL
 					string last = "";
-					for (int i_ = 4; i_ < tL.size(); i_++) {
+					for (int i_ = 4; i_ < (int) tL.size(); i_++) {
 						last += tL.at(i_);
 						if (i_ != tL.size() - 1) {
 							last += " ";
