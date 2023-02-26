@@ -120,15 +120,18 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() >= 5) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkUserID(tL.at(2))) {
-					if (checkFirst(tL.at(3))) {
-						if (checkLast(tL.at(4))) {
-							if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), tL.at(4)))) {
-								cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << tL.at(4) << ", " << tL.at(3) << endl;
-							}
-							else {
-								; // fail, B number exists
-							}
+					string last = "";
+					for (int i_ = 4; i_ < tL.size(); i_++) {
+						last += tL.at(i_);
+						if (i_ != tL.size() - 1) {
+							last += " ";
 						}
+					}
+					if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), last))) {
+						cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << last << ", " << tL.at(3) << endl;
+					}
+					else {
+						; // fail, B number exists
 					}
 				}
 			}
