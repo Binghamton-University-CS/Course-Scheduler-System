@@ -33,7 +33,7 @@ using namespace std;
 
 void showPrompt();
 vector<string> getTokenListFromString(string input);
-void processInputAndPrint(vector<string>);
+void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL);
 
 int main() {
 	string input;
