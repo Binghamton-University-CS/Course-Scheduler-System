@@ -12,6 +12,6 @@ bool checkDepartment(string s);
 bool checkNumber(string s);
 bool checkBNumber(string s);
 bool checkUserID(string s);
-bool checkCourseName(string s);
+//bool checkCourseName(string s);
 //bool checkFirst(string s);
 //bool checkLast(string s);
