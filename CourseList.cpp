@@ -12,6 +12,10 @@ CourseList::CourseList() {
       array = new Course[size];
 }
 
+CourseList::~CourseList() {
+      delete[] array;
+}
+
 bool CourseList::add(Course course) {
       if (this->find(course) != -1) {
         return false;
