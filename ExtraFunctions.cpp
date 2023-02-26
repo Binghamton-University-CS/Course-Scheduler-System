@@ -86,10 +86,14 @@ bool checkUserID(string s) {
 	return true;
 }
 
-//bool checkFirst(string s) {
-//	return true;
-//}
+bool checkCourseName(string s) {
+	return true;
+}
 
-//bool checkLast(string s) {
-//	return true;
-//}
+bool checkFirst(string s) {
+	return true;
+}
+
+bool checkLast(string s) {
+	return true;
+}
