@@ -10,6 +10,7 @@ class StudentList {
     bool remove(string BNumber);
     int find(string BNumber);
     bool checkExists(string BNumber);
+    Student* getStudent(string BNumber);
   private:
     Student* array;
     int size;
