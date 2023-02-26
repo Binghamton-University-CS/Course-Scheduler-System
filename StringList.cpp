@@ -9,6 +9,10 @@ StringList::StringList() {
       array = new string[size];
 }
 
+StringList::~StringList() {
+      delete[] array;
+}
+
 bool StringList::add(string s) {
       if (this->find(s) != -1) {
         return false;
