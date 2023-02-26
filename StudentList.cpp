@@ -11,6 +11,10 @@
 StudentList::StudentList() {
       array = new Student[size];
     }
+
+StudentList::~StudentList() {
+      delete[] array;
+}
   
 bool StudentList::add(Student student) {
       if (this->find(student.getBNumber()) != -1) {
