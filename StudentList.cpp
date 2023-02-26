@@ -9,7 +9,7 @@
 #endif
 
 StudentList::StudentList() {
-      size = 100;
+      size = 1;
       array = new Student[size];
     }
 
