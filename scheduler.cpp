@@ -89,7 +89,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 5);
 		if (tL.size() >= 5) {
 			if (checkCRN(tL.at(1))) {
-				if (checkDepartment(tL.at(2)) {
+				if (checkDepartment(tL.at(2))) {
 					if (checkNumber(tL.at(3)) {
 						if (checkName(tL.at(4)) {
 							cL.add(new Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
