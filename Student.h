@@ -13,6 +13,7 @@ class Student {
     void addCourse(string course);
     void removeCourse(string course);
     void printSchedule();
+    string getBNumber();
   private:
     string BNumber;
     string userID;
