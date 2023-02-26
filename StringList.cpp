@@ -11,7 +11,7 @@ using namespace std;
 StringList::StringList() {
       size = 1;
       currentQuantity = 0;
-      array = new string[size];
+      array = new string*[size];
       for (int i = 0; i < size; i++) {
             array[i] = nullptr;
       }
@@ -27,7 +27,7 @@ bool StringList::add(string s) {
       }
       
       if (currentQuantity == size) {
-        string* temp = new string[size * 2];
+        string* temp = new string*[size * 2];
         for (int i_ = 0; i_ < size * 2; i_++) {
               temp[i_] = nullptr;
         }
