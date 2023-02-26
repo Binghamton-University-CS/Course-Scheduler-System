@@ -1,6 +1,7 @@
 #include <regex>
 #include <string>
 #include <iostream>
+#include <vector>
 
 #ifndef COURSE_H
 #define COURSE_H
@@ -84,6 +85,16 @@ bool checkUserID(string s) {
 		cout << "Input Error: illegal user ID" << endl;
 	}
 	return true;
+}
+
+string getRemainingString(vector<string> tL) {
+	string s = "";
+	for (int i = 4; i < (int) tL.size(); i++) {
+		s += tL.at(i);
+		if (i != (int) tL.size() - 1) {
+			s += " ";
+		}
+	}
 }
 
 //bool checkCourseName(string s) {
