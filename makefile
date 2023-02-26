@@ -37,7 +37,7 @@ $(OBJ)/StudentList.o: StudentList.cpp StudentList.h Student.h Course.h
 $(OBJ)/CourseList.o: CourseList.cpp CourseList.h Course.h Student.h
 	$(CC) $(FLAGS) -c CourseList.cpp -o $@
 
-$(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
+$(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp Course.h Student.h
 	$(CC) $(FLAGS) -c ExtraFunctions.cpp -o $@
 
 tar:	clean
