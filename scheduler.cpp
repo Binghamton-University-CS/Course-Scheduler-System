@@ -88,7 +88,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	else if (tL.at(0) == "build") {
 		checkExtraArguments(tL.size(), 5);
 		if (tL.size() >= 5) {
-			if (checkCRN(tL.at(1)) {
+			if (checkCRN(tL.at(1))) {
 				if (checkDepartment(tL.at(2)) {
 					if (checkNumber(tL.at(3)) {
 						if (checkName(tL.at(4)) {
