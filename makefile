@@ -19,7 +19,7 @@ all: $(BIN)/$(EXE)
 $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o $(OBJ)/StringList.o
 	$(CC) $(FLAGS) $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o $(OBJ)/StringList.o -o $@
 
-$(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.cpp StudentList.h CourseList.h
+$(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.h StudentList.h CourseList.h
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
 	
 $(OBJ)/StringList.o: StringList.cpp StringList.h
@@ -37,7 +37,7 @@ $(OBJ)/StudentList.o: StudentList.cpp StudentList.h Student.h Course.h
 $(OBJ)/CourseList.o: CourseList.cpp CourseList.h Course.h Student.h
 	$(CC) $(FLAGS) -c CourseList.cpp -o $@
 
-$(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp Course.h Student.h
+$(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp ExtraFunctions.h Course.h Student.h
 	$(CC) $(FLAGS) -c ExtraFunctions.cpp -o $@
 
 tar:	clean
