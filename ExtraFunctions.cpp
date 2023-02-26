@@ -87,13 +87,16 @@ bool checkUserID(string s) {
 }
 
 bool checkCourseName(string s) {
+	s;
 	return true;
 }
 
 bool checkFirst(string s) {
+	s;
 	return true;
 }
 
 bool checkLast(string s) {
+	s;
 	return true;
 }
