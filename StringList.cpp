@@ -23,7 +23,7 @@ bool StringList::add(string s) {
         return false;
       }
       
-      if (lastIndex == size - 1) {
+      if (currentQuantity == size) {
         string* temp = new string[size * 2];
         for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
