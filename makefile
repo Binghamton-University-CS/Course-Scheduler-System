@@ -1,9 +1,9 @@
 COURSE = cs240
 SEMESTER = spring2023
-CP_NUMBER = 1
+CP_NUMBER = 2
 LASTNAME = Fehrer
 GITUSERID = mtfehrer
-EXE = scheduler_cp1
+EXE = scheduler
 
 REPODIR = ../$(COURSE)-$(SEMESTER)-cp$(CP_NUMBER)-$(GITUSERID)
 TARFILE = CP$(CP_NUMBER)_$(LASTNAME)_$(USER)_$(GITUSERID).tar
@@ -17,7 +17,7 @@ OBJ = obj
 all: $(BIN)/$(EXE)
 
 $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o $(OBJ)/StringList.o
-	$(CC) $(FLAGS) $(OBJ)/scheduler.o -o $@
+	$(CC) $(FLAGS) $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraFunctions.o $(OBJ)/StudentList.o $(OBJ)/CourseList.o $(OBJ)/StringList.o -o $@
 
 $(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.cpp StudentList.h CourseList.h
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
