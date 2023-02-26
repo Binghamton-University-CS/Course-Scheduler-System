@@ -34,3 +34,7 @@ void Course::printRoster() {
       cout << "Students: " << studentList.getSize();
       studentList.printAll();
 }
+
+string Course::getCRN() {
+      return CRN;
+}
