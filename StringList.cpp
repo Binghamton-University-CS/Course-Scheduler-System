@@ -28,7 +28,7 @@ bool StringList::add(string s) {
         for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
         }
-        delete[] array;
+        delete array;
         array = temp;
         size *= 2;
       }
