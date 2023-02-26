@@ -9,7 +9,6 @@
 using namespace std;
 
 StringList::StringList() {
-      size = 1;
       currentQuantity = 0;
       array = new string*[size];
       for (int i = 0; i < size; i++) {
