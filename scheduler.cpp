@@ -9,24 +9,24 @@
 #include "ExtraFunctions.cpp"
 #endif
 
-#ifndef STUDENT
-#define STUDENT
-#include "Student.cpp"
+#ifndef STUDENT_H
+#define STUDENT_H
+#include "Student.h"
 #endif
 
-#ifndef COURSE
-#define COURSE
-#include "Course.cpp"
+#ifndef COURSE_H
+#define COURSE_H
+#include "Course.h"
 #endif
 
-#ifndef STUDENTLIST
-#define STUDENTLIST
-#include "StudentList.cpp"
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
+#include "StudentList.h"
 #endif
 
-#ifndef COURSELIST
-#define COURSELIST
-#include "CourseList.cpp"
+#ifndef COURSELIST_H
+#define COURSELIST_H
+#include "CourseList.h"
 #endif
 
 using namespace std;
