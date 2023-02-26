@@ -21,10 +21,6 @@ Course::Course(string CRN = "", string department = "", string number = "", stri
       studentList = StringList();
     }
 
-Course::~Course() {
-      delete studentList;
-}
-
 string Course::addStudent(string student) {
       studentList.add(student);
     }
