@@ -15,5 +15,5 @@ class CourseList {
   private:
     Course* array;
     int size;
-    int lastIndex;
+    int currentQuantity;
 };
