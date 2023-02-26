@@ -86,7 +86,6 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		exit(0);	
 	}
 	else if (tL.at(0) == "build") {
-		checkExtraArguments(tL.size(), 5);
 		if (tL.size() >= 5) {
 			if (checkCRN(tL.at(1))) {
 				if (checkDepartment(tL.at(2))) {
@@ -119,7 +118,6 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkNotEnoughArguments(tL.size(), 2);
 	}
 	else if (tL.at(0) == "enroll") {
-		checkExtraArguments(tL.size(), 5);
 		if (tL.size() >= 5) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkUserID(tL.at(2))) {
