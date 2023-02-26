@@ -31,8 +31,8 @@ bool StudentList::add(Student student) {
       return true;
     }
   
-bool StudentList::remove(Student student) {
-      int index = this->find(student);
+bool StudentList::remove(string BNumber) {
+      int index = this->find(BNumber);
       if (index == -1) {
         return false;
       }
@@ -42,7 +42,7 @@ bool StudentList::remove(Student student) {
       return true;
     }
   
-int StudentList::find(Student student) {
+int StudentList::find(string BNumber) {
       for (int i = 0; i < lastIndex; i++) {
         if (student == array[i]) {
           return i;
@@ -51,7 +51,7 @@ int StudentList::find(Student student) {
       return -1;
     }
 
-bool StudentList::checkStudentExistsByBNumber(string BNumber) {
+bool StudentList::checkExists(string BNumber) {
       for (int i = 0; i < lastIndex; i++) {
             if (array[i].BNumber == BNumber) {
                   return true;
@@ -60,10 +60,10 @@ bool StudentList::checkStudentExistsByBNumber(string BNumber) {
       return false;
 }
 
-Student StudentList::getStudentByBNumber(string BNumber) {
-      for (int i = 0; i < lastIndex; i++) {
-            if (array[i].BNumber == BNumber) {
-                  return array[i]
-            }
-      }
-}
+//Student StudentList::getStudentByBNumber(string BNumber) {
+//      for (int i = 0; i < lastIndex; i++) {
+//            if (array[i].BNumber == BNumber) {
+//                  return array[i]
+//            }
+//      }
+//}
