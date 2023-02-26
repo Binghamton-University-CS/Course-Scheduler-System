@@ -140,7 +140,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.find(tL.at(2)).addStudent(tL.at(1))
+					cL.getCourse(tL.at(2))->addStudent(tL.at(1))
 					cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
 				}
 			}
@@ -152,7 +152,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.find(tL.at(2)).dropStudent(tL.at(1));
+					cL.getCourse(tL.at(2))->dropStudent(tL.at(1));
 					cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;
 				}
 			}
@@ -164,7 +164,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 2) {
 			if (checkCRN(tL.at(1))) {
 				if (cl.checkCourseExistsByCRN(tL.at(1))) {
-					cL.getCourseByCRN(tL.at(1)).printRoster();
+					cL.getCourse(tL.at(1))->printRoster();
 				}
 				else {
 					; //print crn not in courselist
@@ -178,7 +178,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 2) {
 			if (checkBNumber(tL.at(1))) {
 				if (sL.checkStudentExistsByBNumber(tL.at(1))) {
-					sL.getStudentByBNumber(tL.at(1)).printSchedule();
+					sL.getStudent(tL.at(1))->printSchedule();
 				}
 				else {
 					; // print student not in studentlist
