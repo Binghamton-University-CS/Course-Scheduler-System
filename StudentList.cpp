@@ -63,7 +63,7 @@ bool StudentList::checkExists(string BNumber) {
 Student* StudentList::getStudent(string BNumber) {
       for (int i = 0; i < lastIndex; i++) {
             if (array[i].BNumber == BNumber) {
-                  return &array[i]
+                  return &array[i];
             }
       }
 }
