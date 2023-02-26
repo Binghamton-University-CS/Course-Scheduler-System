@@ -28,7 +28,7 @@ bool CourseList::add(Course course) {
       }
       lastIndex++;
       array[lastIndex] = course;
-      true;
+      return true;
     }
 
 bool CourseList::remove(string CRN) {
