@@ -21,10 +21,6 @@ Student::Student(string BNumber = "", string userID = "", string first = "", str
       courseList = StringList();
     }
 
-Student::~Student() {
-      delete courseList;
-}
-
 void Student::addCourse(string course) {
       courseList.add(course);
     }
