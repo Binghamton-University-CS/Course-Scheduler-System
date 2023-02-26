@@ -17,13 +17,13 @@ Course::Course(string CRN, string department, string number, string name) {
       this->department = department;
       this->number = number;
       this->name = name;
-      stringList = StringList();
+      studentList = StringList();
     }
 string Course::addStudent(string student) {
-      stringList.add(student);
+      studentList.add(student);
     }
 string Course::dropStudent(string student) {
-      stringList.remove(student);
+      studentList.remove(student);
     }
 void Course::printRoster() {
       cout << "CRN: " << CRN << endl;
