@@ -13,7 +13,7 @@ StudentList::StudentList() {
     }
   
 bool StudentList::add(Student student) {
-      if (this->find(student) != -1) {
+      if (this->find(student.BNumber) != -1) {
         return false;
       }
       
