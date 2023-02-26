@@ -87,16 +87,16 @@ bool checkUserID(string s) {
 }
 
 bool checkCourseName(string s) {
-	s;
+	cout << s;
 	return true;
 }
 
 bool checkFirst(string s) {
-	s;
+	cout << s;
 	return true;
 }
 
 bool checkLast(string s) {
-	s;
+	cout << s;
 	return true;
 }
