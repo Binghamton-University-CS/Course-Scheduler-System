@@ -25,9 +25,11 @@ Course::Course(string CRN, string department, string number, string name) {
 
 string Course::addStudent(string student) {
       studentList.add(student);
+      return "";
     }
 string Course::dropStudent(string student) {
       studentList.remove(student);
+      return "";
     }
 void Course::printRoster() {
       cout << "CRN: " << CRN << endl;
