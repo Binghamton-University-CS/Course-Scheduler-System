@@ -95,6 +95,7 @@ string getRemainingString(vector<string> tL) {
 			s += " ";
 		}
 	}
+	return s;
 }
 
 //bool checkCourseName(string s) {
