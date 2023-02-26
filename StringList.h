@@ -12,7 +12,7 @@ class StringList {
     void printAll();
     int getSize();
   private:
-    int size;
+    int size = 1;
     int currentQuantity;
-    string* array[];
+    string* array[size];
 };
