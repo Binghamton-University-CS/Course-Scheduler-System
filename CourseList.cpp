@@ -68,7 +68,7 @@ bool CourseList::checkExists(string CRN) {
 Course* CourseList::getCourse(string CRN) {
       for (int i = 0; i < lastIndex; i++) {
             if (array[i].getCRN() == CRN) {
-                  return &array[i]
+                  return &array[i];
             }
       }
 }
