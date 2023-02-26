@@ -48,7 +48,7 @@ bool regexCheck(string s, string e) {
 }
 
 bool checkCRN(string s) {
-	if (!regexCheck(s, "^\d{6}$")) {
+	if (!regexCheck(s, "^[0-9]{6}$")) {
 		cout << "Input Error: illegal CRN" << endl;
 		return false;
 	}
