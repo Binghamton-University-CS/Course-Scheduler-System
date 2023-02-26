@@ -10,6 +10,7 @@ class CourseList {
     bool remove(string CRN);
     int find(string CRN);
     bool checkExists(string CRN);
+    Course* getCourse(string CRN);
   private:
     Course* array;
     int size;
