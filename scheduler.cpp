@@ -92,7 +92,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 				if (checkDepartment(tL.at(2))) {
 					if (checkNumber(tL.at(3))) {
 						if (checkCourseName(tL.at(4))) {
-							cL.add(new Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
+							cL.add(Course(tL.at(1), tL.at(2), tL.at(3), tL.at(4)));
 							cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< tL.at(4) << endl;
 						}
 					}
