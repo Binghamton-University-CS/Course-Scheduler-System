@@ -4,9 +4,9 @@
 #include <cctype>
 #include <cstdlib>
 
-#ifndef EXTRAFUNCTIONS
-#define EXTRAFUNCTIONS
-#include "ExtraFunctions.cpp"
+#ifndef EXTRAFUNCTIONS_H
+#define EXTRAFUNCTIONS_H
+#include "ExtraFunctions.h"
 #endif
 
 #ifndef STUDENT_H
