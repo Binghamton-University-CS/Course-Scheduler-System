@@ -20,10 +20,10 @@ Student::Student(string BNumber, string userID, string first, string last) {
       courseList = StringList();
     }
 void Student::addCourse(Course course) {
-      StringList.add(course);
+      courseList.add(course);
     }
 void Student::removeCourse(Course course) {
-      StringList.remove(course);
+      courseList.remove(course);
     }
 void Student::printSchedule() {
       cout << "Student: " << BNumber << ": " << first;
