@@ -14,6 +14,7 @@ class Course {
     string addStudent(string student);
     string dropStudent(string student);
     void printRoster();
+    string getCRN();
   private:
     string CRN;
     string department;
