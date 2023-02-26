@@ -9,6 +9,7 @@
 #endif
 
 CourseList::CourseList() {
+      size = 100;
       array = new Course[size];
 }
 
