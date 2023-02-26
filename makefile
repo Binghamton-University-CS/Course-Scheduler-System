@@ -21,24 +21,24 @@ $(BIN)/$(EXE): $(OBJ)/scheduler.o $(OBJ)/Student.o $(OBJ)/Course.o $(OBJ)/ExtraF
 
 $(OBJ)/scheduler.o: scheduler.cpp Student.h Course.h ExtraFunctions.cpp StudentList.h CourseList.h
 	$(CC) $(FLAGS) -c scheduler.cpp -o $@
+	
+$(OBJ)/StringList.o: StringList.cpp StringList.h
+	$(CC) $(FLAGS) -c StringList.cpp -o $@
 
-$(OBJ)/Course.o: Course.h Course.cpp Student.h StringList.h
+$(OBJ)/Course.o: Course.cpp Course.h Student.h StringList.h
 	$(CC) $(FLAGS) -c Course.cpp -o $@
 	
-$(OBJ)/Student.o: Student.h Student.cpp Course.h StringList.h
+$(OBJ)/Student.o: Student.cpp Student.h Course.h StringList.h
 	$(CC) $(FLAGS) -c Student.cpp -o $@
+
+$(OBJ)/StudentList.o: StudentList.cpp StudentList.h Student.h Course.h
+	$(CC) $(FLAGS) -c StudentList.cpp -o $@
+
+$(OBJ)/CourseList.o: CourseList.cpp CourseList.h Course.h Student.h
+	$(CC) $(FLAGS) -c CourseList.cpp -o $@
 
 $(OBJ)/ExtraFunctions.o: ExtraFunctions.cpp
 	$(CC) $(FLAGS) -c ExtraFunctions.cpp -o $@
-
-$(OBJ)/StudentList.o: StudentList.h StudentList.cpp Student.h Course.h
-	$(CC) $(FLAGS) -c StudentList.cpp -o $@
-
-$(OBJ)/CourseList.o: CourseList.h CourseList.cpp Course.h Student.h
-	$(CC) $(FLAGS) -c CourseList.cpp -o $@
-
-$(OBJ)/StringList.o: StringList.h StringList.cpp
-	$(CC) $(FLAGS) -c StringList.cpp -o $@
 
 tar:	clean
 	tar cvvf $(TARFILE) $(REPODIR)
