@@ -39,7 +39,7 @@ bool StringList::add(string s) {
         size *= 2;
       }
       currentQuantity++;
-      array[currentQuantity] = s;
+      *array[currentQuantity] = s;
       return true;
     }
 
@@ -48,6 +48,7 @@ bool StringList::remove(string s) {
       if (index == -1) {
         return false;
       }
+      delete array[index];
       for (int i = index; i < currentQuantity - 1; i++) {
         array[i] = array[i + 1];
       }
@@ -56,7 +57,7 @@ bool StringList::remove(string s) {
     
 int StringList::find(string s) {
       for (int i = 0; i < currentQuantity; i++) {
-        if (s == array[i]) {
+        if (s == *array[i]) {
           return i;
         }
       }
