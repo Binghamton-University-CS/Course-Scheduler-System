@@ -14,5 +14,5 @@ class StringList {
   private:
     string* array;
     int size;
-    int lastIndex;
+    int currentQuantity;
 };
