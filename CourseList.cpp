@@ -23,7 +23,7 @@ bool CourseList::add(Course course) {
         return false;
       }
       
-      if (currentQuantity == size - 1) {
+      if (currentQuantity == size) {
         Course* temp = new Course[size * 2];
         for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
