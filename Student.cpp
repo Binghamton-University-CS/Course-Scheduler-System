@@ -30,3 +30,7 @@ void Student::printSchedule() {
       cout << "Student: " << BNumber << ": " << first;
       courseList.printAll();
     }
+
+int Student::getBNumber() {
+      return BNumber;
+}
