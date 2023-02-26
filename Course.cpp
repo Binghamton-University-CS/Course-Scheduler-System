@@ -28,6 +28,6 @@ string Course::dropStudent(string student) {
     }
 void Course::printRoster() {
       cout << "CRN: " << CRN << endl;
-      cout << "Students: " << studentList.size();
+      cout << "Students: " << studentList.getSize();
       studentList.printAll();
 }
