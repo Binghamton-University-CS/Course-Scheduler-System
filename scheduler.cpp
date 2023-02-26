@@ -19,6 +19,16 @@
 #include "Course.h"
 #endif
 
+#ifndef STUDENTLIST_H
+#define STUDENTLIST_H
+#include "StudentList.h"
+#endif
+
+#ifndef COURSELIST_H
+#define COURSELIST_H
+#include "CourseList.h"
+#endif
+
 using namespace std;
 
 void showPrompt();
