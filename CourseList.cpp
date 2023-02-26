@@ -23,7 +23,7 @@ bool CourseList::add(Course course) {
       }
       
       if (lastIndex == size - 1) {
-        T* temp = new T[size * 2];
+        Course* temp = new Course[size * 2];
         for (int i = 0; i < lastIndex; i++) {
           temp[i] = array[i];
         }
