@@ -9,7 +9,7 @@
 using namespace std;
 
 StringList::StringList() {
-      size = 100;
+      size = 10;
       array = new string[size];
 }
 
