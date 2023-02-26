@@ -19,10 +19,10 @@ Student::Student(string BNumber, string userID, string first, string last) {
       this->last = last;
       courseList = StringList();
     }
-void Student::addCourse(Course course) {
+void Student::addCourse(string course) {
       courseList.add(course);
     }
-void Student::removeCourse(Course course) {
+void Student::removeCourse(string course) {
       courseList.remove(course);
     }
 void Student::printSchedule() {
