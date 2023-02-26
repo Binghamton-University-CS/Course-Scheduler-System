@@ -7,10 +7,9 @@ class CourseList {
   public:
     CourseList();
     bool add(Course course);
-    bool remove(Course course);
-    int find(Course course);
-    bool checkCourseExistsByCRN(string CRN);
-    Course getCourseByCRN(string CRN);
+    bool remove(string CRN);
+    int find(string CRN);
+    bool checkExists(string CRN);
   private:
     Course* array;
     int size;
