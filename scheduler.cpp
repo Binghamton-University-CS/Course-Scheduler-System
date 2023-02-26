@@ -105,8 +105,12 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() >= 2) {
 			if (checkCRN(tL.at(1))) {
-				cL.remove(tL.at(1));
-				cout << "Success: cancelled course " << tL.at(1) << endl;
+				if (cL.remove(tL.at(1))) {
+					cout << "Success: cancelled course " << tL.at(1) << endl;
+				}
+				else {
+					; // fail, CRN exists
+				}
 			}
 		}
 		checkNotEnoughArguments(tL.size(), 2);
@@ -118,8 +122,12 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 				if (checkUserID(tL.at(2))) {
 					if (checkFirst(tL.at(3))) {
 						if (checkLast(tL.at(4))) {
-							sL.add(tL.at(1), tL.at(2), tL.at(3), tL.at(4));
-							cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << tL.at(4) << ", " << tL.at(3) << endl;
+							if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), tL.at(4)))) {
+								cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << tL.at(4) << ", " << tL.at(3) << endl;
+							}
+							else {
+								; // fail, B number exists
+							}
 						}
 					}
 				}
