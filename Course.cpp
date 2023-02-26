@@ -13,7 +13,7 @@
 
 using namespace std;
 
-Course::Course(string CRN, string department, string number, string name) {
+Course::Course(string CRN = "", string department = "", string number = "", string name = "") {
       this->CRN = CRN;
       this->department = department;
       this->number = number;
