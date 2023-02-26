@@ -32,6 +32,6 @@ void Student::printSchedule() {
       courseList.printAll();
     }
 
-int Student::getBNumber() {
+string Student::getBNumber() {
       return BNumber;
 }
