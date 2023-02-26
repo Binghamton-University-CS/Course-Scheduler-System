@@ -13,7 +13,7 @@
 
 using namespace std;
 
-Student::Student(string BNumber, string userID, string first, string last) {
+Student::Student(string BNumber = "", string userID = "", string first = "", string last = "") {
       this->BNumber = BNumber;
       this->userID = userID;
       this->first = first;
