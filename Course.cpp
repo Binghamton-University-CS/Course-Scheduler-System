@@ -20,6 +20,11 @@ Course::Course(string CRN, string department, string number, string name) {
       this->name = name;
       studentList = StringList();
     }
+
+Course::~Course() {
+      delete studentList;
+}
+
 string Course::addStudent(string student) {
       studentList.add(student);
     }
