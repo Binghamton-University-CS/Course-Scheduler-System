@@ -60,10 +60,10 @@ bool CourseList::checkExists(string CRN) {
       return false;
 }
 
-//Course CourseList::getCourseByCRN(string CRN) {
-//      for (int i = 0; i < lastIndex; i++) {
-//            if (array[i].CRN == CRN) {
-//                  return array[i]
-//            }
-//      }
-//}
+Course* CourseList::getCourse(string CRN) {
+      for (int i = 0; i < lastIndex; i++) {
+            if (array[i].CRN == CRN) {
+                  return &array[i]
+            }
+      }
+}
