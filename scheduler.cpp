@@ -37,8 +37,8 @@ void processInputAndPrint(vector<string>);
 
 int main() {
 	string input;
-	CourseList courseList = new CourseList();
-	StudentList studentList = new StudentList();
+	CourseList courseList = CourseList();
+	StudentList studentList = StudentList();
 	while (true){
 		showPrompt();
 		getline(cin, input);
