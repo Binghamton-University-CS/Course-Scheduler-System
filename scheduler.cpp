@@ -79,7 +79,7 @@ vector<string> getTokenListFromString(string input) {
 
 void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	if (tL.size() == 0) {
-		cout << "Command not recognized, please try again." << endl;
+		cout << "Input Error: command not recognized, please try again." << endl;
 	}
 	else if (tL.at(0) == "quit") {
 		checkExtraArguments(tL.size(), 1);
@@ -93,7 +93,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					if (checkNumber(tL.at(3))) {
 						string courseName = getRemainingString(tL);
 						if (cL.add(Course(tL.at(1), tL.at(2), tL.at(3), courseName))) {
-							cout << "build course " << tL.at(1) << " " << tL.at(2) << " " << tL.at(3) << " "<< courseName << endl;
+							cout << "Success: built course " << tL.at(2) << tL.at(3) << " (CRN: " << tL.at(1) << ") :" << courseName << endl;
 						}
 						else {
 							//print CRN already exists
