@@ -1,9 +1,12 @@
 #include <string>
+#include <iostream>
 
 #ifndef STRINGLIST_H
 #define STRINGLIST_H
 #include "StringList.h"
 #endif
+
+using namespace std;
 
 StringList::StringList() {
       array = new string[size];
