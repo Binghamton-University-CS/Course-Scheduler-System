@@ -71,4 +71,6 @@ Student* StudentList::getStudent(string BNumber) {
                   return &array[i];
             }
       }
+      //only here to remove warning
+      return &array[0];
 }
