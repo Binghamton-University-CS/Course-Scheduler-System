@@ -52,9 +52,18 @@ int StudentList::find(Student student) {
     }
 
 bool StudentList::checkStudentExistsByBNumber(string BNumber) {
-      ; //edit this
+      for (int i = 0; i < lastIndex; i++) {
+            if (array[i].BNumber == BNumber) {
+                  return true;
+            }
+      }
+      return false;
 }
 
 Student StudentList::getStudentByBNumber(string BNumber) {
-      ; // edit this
+      for (int i = 0; i < lastIndex; i++) {
+            if (array[i].BNumber == BNumber) {
+                  return array[i]
+            }
+      }
 }
