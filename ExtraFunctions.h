@@ -1,5 +1,7 @@
 #include <string>
 
+using namespace std;
+
 //void printCourseRoster(string CRN, Course* courseList, Student* studentList);
 //void printStudentSchedule(string BNumber, Course* courseList, Student* studentList;
 void checkExtraArguments(int val, int max);
