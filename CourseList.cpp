@@ -10,7 +10,7 @@
 
 CourseList::CourseList() {
       size = 1;
-      lastIndex = 0;
+      currentQuantity = 0;
       array = new Course[size];
 }
 
@@ -23,17 +23,17 @@ bool CourseList::add(Course course) {
         return false;
       }
       
-      if (lastIndex == size - 1) {
+      if (currentQuantity == size - 1) {
         Course* temp = new Course[size * 2];
-        for (int i = 0; i < lastIndex; i++) {
+        for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
         }
         delete[] array;
         array = temp;
         size *= 2;
       }
-      lastIndex++;
-      array[lastIndex] = course;
+      currentQuantity++;
+      array[currentQuantity - 1] = course;
       return true;
     }
 
@@ -42,14 +42,14 @@ bool CourseList::remove(string CRN) {
       if (index == -1) {
         return false;
       }
-      for (int i = index; i < lastIndex - 1; i++) {
+      for (int i = index; i < currentQuantity - 1; i++) {
         array[i] = array[i + 1];
       }
       return true;
     }
     
 int CourseList::find(string CRN) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
         if (CRN == array[i].getCRN()) {
           return i;
         }
@@ -58,7 +58,7 @@ int CourseList::find(string CRN) {
     }
 
 bool CourseList::checkExists(string CRN) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             if (array[i].getCRN() == CRN) {
                   return true;
             }
@@ -67,7 +67,7 @@ bool CourseList::checkExists(string CRN) {
 }
 
 Course* CourseList::getCourse(string CRN) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             if (array[i].getCRN() == CRN) {
                   return &array[i];
             }
