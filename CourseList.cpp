@@ -10,6 +10,7 @@
 
 CourseList::CourseList() {
       size = 1;
+      lastIndex = 0;
       array = new Course[size];
 }
 
