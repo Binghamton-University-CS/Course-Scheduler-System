@@ -123,14 +123,12 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() >= 5) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkUserID(tL.at(2))) {
-					//get remaining string of tL
 					string last = getRemainingString(tL);
-					
 					if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), last))) {
-						cout << "enroll student " << tL.at(1) << " (" << tL.at(2) << ") " << last << ", " << tL.at(3) << endl;
+						cout << "Success: enrolled student " << tL.at(1) << " (" << tL.at(2) << ") " << last << ", " << tL.at(3) << endl;
 					}
 					else {
-						; // fail, B number exists
+						cout << "Fail: cannot enroll student, B Number exists" << endl;
 					}
 				}
 			}
@@ -143,7 +141,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
 					cL.getCourse(tL.at(2))->addStudent(tL.at(1));
-					cout << "add student " << tL.at(1) << " into course " << tL.at(2) << endl;
+					cout << "Success: added student " << tL.at(1) << " into course " << tL.at(2) << endl;
 				}
 			}
 		}
@@ -155,7 +153,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
 					cL.getCourse(tL.at(2))->dropStudent(tL.at(1));
-					cout << "remove student " << tL.at(1) << " from course " << tL.at(2) << endl;
+					cout << "Success: removed student " << tL.at(1) << " from course " << tL.at(2) << endl;
 				}
 			}
 		}
