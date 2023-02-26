@@ -93,10 +93,10 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					if (checkNumber(tL.at(3))) {
 						string courseName = getRemainingString(tL);
 						if (cL.add(Course(tL.at(1), tL.at(2), tL.at(3), courseName))) {
-							cout << "Success: built course " << tL.at(2) << tL.at(3) << " (CRN: " << tL.at(1) << ") :" << courseName << endl;
+							cout << "Success: built course " << tL.at(2) << tL.at(3) << " (CRN: " << tL.at(1) << ") : " << courseName << endl;
 						}
 						else {
-							//print CRN already exists
+							cout << "Fail: cannot build course " << tL.at(2) << tL.at(3) << " (CRN: " << tL.at(1) << ") : " << "CRN exists" << endl;
 						}
 					}
 				}
@@ -112,7 +112,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					cout << "Success: cancelled course " << tL.at(1) << endl;
 				}
 				else {
-					; // fail, CRN exists
+					cout << "Fail: cannot cancel course, CRN does not exist" << endl;
 				}
 			}
 		}
