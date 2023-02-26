@@ -5,6 +5,7 @@ using namespace std;
 class StringList {
   public:
     StringList();
+    ~StringList();
     bool add(string s);
     bool remove(string s);
     int find(string s);
