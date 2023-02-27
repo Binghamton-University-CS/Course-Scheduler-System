@@ -21,8 +21,8 @@ CourseList::~CourseList() {
       delete[] array;
 }
 
-bool CourseList::add(Course course) {
-      if (this->find(course.getCRN()) != -1) {
+bool CourseList::add(string CRN, string department, string number, string name) {
+      if (this->find(CRN) != -1) {
         return false;
       }
       
@@ -39,7 +39,7 @@ bool CourseList::add(Course course) {
         size *= 2;
       }
       currentQuantity++;
-      array[currentQuantity - 1] = &course;
+      array[currentQuantity - 1] = new Course(CRN, department, number, name);
       return true;
     }
 
