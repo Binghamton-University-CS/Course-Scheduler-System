@@ -27,7 +27,7 @@ bool StringList::add(string s) {
       }
       
       if (currentQuantity == size) {
-        string* temp = new string*[size * 2];
+        string** temp = new string*[size * 2];
         for (int i_ = 0; i_ < size * 2; i_++) {
               temp[i_] = nullptr;
         }
