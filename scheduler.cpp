@@ -124,7 +124,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkUserID(tL.at(2))) {
 					string last = getRemainingString(tL);
-					if (sL.add(Student(tL.at(1), tL.at(2), tL.at(3), last))) {
+					if (sL.add(tL.at(1), tL.at(2), tL.at(3), last)) {
 						cout << "Success: enrolled student " << tL.at(1) << " (" << tL.at(2) << ") " << last << ", " << tL.at(3) << endl;
 					}
 					else {
