@@ -52,6 +52,9 @@ bool StringList::remove(string s) {
         return false;
       }
       delete array[index];
+      if (index == currentQuantity - 1) {
+            return true;
+      }
       for (int i = index; i < currentQuantity - 1; i++) {
         array[i] = array[i + 1];
       }
