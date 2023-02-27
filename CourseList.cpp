@@ -18,6 +18,9 @@ CourseList::CourseList() {
 }
 
 CourseList::~CourseList() {
+      for (int i = 0; i < currentQuantity; i++) {
+            delete array[i];
+      }
       delete[] array;
 }
 
