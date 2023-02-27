@@ -13,7 +13,7 @@ class StudentList {
     bool checkExists(string BNumber);
     Student* getStudent(string BNumber);
   private:
-    Student* array;
     int size;
-    int lastIndex;
+    int currentQuantity;
+    Student** array;
 };
