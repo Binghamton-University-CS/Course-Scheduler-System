@@ -9,6 +9,7 @@
 #endif
 
 CourseList::CourseList() {
+      size = 1;
       currentQuantity = 0;
       array = new Course*[size];
       for (int i = 0; i < size; i++) {
