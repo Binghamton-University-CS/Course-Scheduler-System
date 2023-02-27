@@ -33,7 +33,7 @@ string Course::dropStudent(string student) {
     }
 void Course::printRoster() {
       cout << "CRN: " << CRN << endl;
-      cout << "Students: " << studentList.getCurrentQuantity();
+      cout << "Students: " << studentList.getCurrentQuantity() << endl;
       studentList.printAll();
 }
 
