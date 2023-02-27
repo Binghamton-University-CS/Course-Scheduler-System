@@ -48,14 +48,14 @@ bool StudentList::remove(string BNumber) {
       if (index == -1) {
         return false;
       }
-      for (int i = index; i < lastIndex - 1; i++) {
+      for (int i = index; i < currentQuantity - 1; i++) {
         array[i] = array[i + 1];
       }
       return true;
     }
   
 int StudentList::find(string BNumber) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
         if (BNumber == array[i].getBNumber()) {
           return i;
         }
@@ -64,7 +64,7 @@ int StudentList::find(string BNumber) {
     }
 
 bool StudentList::checkExists(string BNumber) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             if (array[i].getBNumber() == BNumber) {
                   return true;
             }
@@ -73,7 +73,7 @@ bool StudentList::checkExists(string BNumber) {
 }
 
 Student* StudentList::getStudent(string BNumber) {
-      for (int i = 0; i < lastIndex; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             if (array[i].getBNumber() == BNumber) {
                   return &array[i];
             }
