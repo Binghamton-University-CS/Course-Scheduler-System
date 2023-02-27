@@ -26,17 +26,20 @@ bool StudentList::add(string BNumber, string userID, string first, string last) 
         return false;
       }
       
-      if (lastIndex == size - 1) {
-        Student* temp = new Student[size * 2];
+      if (currentQuantity == size) {
+        Student** temp = new Student*[size * 2];
+        for (int i_ = 0; i_ < size * 2; i_++) {
+          temp[i_] = nullptr;
+        }
         for (int i = 0; i < lastIndex; i++) {
           temp[i] = array[i];
         }
-        delete array;
+        delete[] array;
         array = temp;
         size *= 2;
       }
-      lastIndex++;
-      array[lastIndex] = student;
+      currentQuantity++;
+      array[currentQuantity - 1] = new Student(BNumber, userID, first, last);
       return true;
     }
   
