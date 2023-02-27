@@ -39,7 +39,7 @@ bool StringList::add(string s) {
         size *= 2;
       }
       currentQuantity++;
-      array[currentQuantity] = &s;
+      array[currentQuantity] = new string(s);
       return true;
     }
 
