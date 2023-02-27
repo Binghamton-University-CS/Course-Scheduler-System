@@ -10,7 +10,11 @@
 
 StudentList::StudentList() {
       size = 1;
-      array = new Student[size];
+      currentQuantity = 0;
+      array = new Student*[size];
+      for (int i = 0; i < size; i++) {
+            array[i] = nullptr;
+      }
     }
 
 StudentList::~StudentList() {
