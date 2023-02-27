@@ -8,7 +8,7 @@ class StudentList {
     StudentList();
     ~StudentList();
     bool add(string BNumber, string userID, string first, string last);
-    bool remove(string BNumber);
+    //bool remove(string BNumber);
     int find(string BNumber);
     bool checkExists(string BNumber);
     Student* getStudent(string BNumber);
