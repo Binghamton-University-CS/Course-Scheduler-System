@@ -64,7 +64,7 @@ int StringList::find(string s) {
       return -1;
     }
 void StringList::printAll() {
-      for (int i = 0; i < size; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             cout << *(array[i]) << endl;
       }
 }
