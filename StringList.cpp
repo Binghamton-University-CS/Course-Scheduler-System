@@ -69,6 +69,6 @@ void StringList::printAll() {
       }
 }
 
-int StringList::getSize() {
-      return size;
+int StringList::getCurrentQuantity() {
+      return currentQuantity;
 }
