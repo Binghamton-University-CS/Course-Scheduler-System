@@ -10,7 +10,7 @@ class StringList {
     bool remove(string s);
     int find(string s);
     void printAll();
-    int getSize();
+    int getCurrentQuantity();
   private:
     int size;
     int currentQuantity;
