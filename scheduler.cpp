@@ -91,7 +91,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 				if (checkDepartment(tL.at(2))) {
 					if (checkNumber(tL.at(3))) {
 						string courseName = getRemainingString(tL);
-						if (cL.add(Course(tL.at(1), tL.at(2), tL.at(3), courseName))) {
+						if (cL.add(tL.at(1), tL.at(2), tL.at(3), courseName)) {
 							cout << "Success: built course " << tL.at(2) << tL.at(3) << " (CRN: " << tL.at(1) << ") : " << courseName << endl;
 						}
 						else {
