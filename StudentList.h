@@ -7,7 +7,7 @@ class StudentList {
   public:
     StudentList();
     ~StudentList();
-    bool add(Student student);
+    bool add(string BNumber, string userID, string first, string last);
     bool remove(string BNumber);
     int find(string BNumber);
     bool checkExists(string BNumber);
