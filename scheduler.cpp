@@ -61,11 +61,13 @@ void showPrompt() {
 
 vector<string> getTokenListFromString(string input) {
 	vector<string> tL = {};
-	string currentToken;
+	string currentToken = "";
 	for (unsigned int i = 0; i < input.size(); i++) {
 		if (isspace(input[i]) != 0) {
-			tL.push_back(currentToken);
-			currentToken = "";
+			if (currentToken != "") {
+				tL.push_back(currentToken)
+				currentToken = "";
+			}
 		}
 		else {
 			currentToken += input[i];
