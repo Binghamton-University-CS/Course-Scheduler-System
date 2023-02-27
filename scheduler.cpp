@@ -167,7 +167,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					cL.getCourse(tL.at(1))->printRoster();
 				}
 				else {
-					; //print crn not in courselist
+					cout << "Fail: CRN does not exist" << endl;
 				}
 			}
 		}
@@ -181,7 +181,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					sL.getStudent(tL.at(1))->printSchedule();
 				}
 				else {
-					; // print student not in studentlist
+					cout << "Fail: BNumber does not exist" << endl;
 				}
 			}
 		}
