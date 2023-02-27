@@ -26,14 +26,14 @@ bool CourseList::add(Course course) {
       }
       
       if (currentQuantity == size) {
-        Course* temp = new Course*[size * 2];
+        Course** temp = new Course*[size * 2];
         for (int i_ = 0; i_ < size * 2; i_++) {
               temp[i_] = nullptr;
         }
         for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
         }
-        delete array;
+        delete[] array;
         array = temp;
         size *= 2;
       }
