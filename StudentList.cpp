@@ -43,16 +43,16 @@ bool StudentList::add(string BNumber, string userID, string first, string last) 
       return true;
     }
   
-bool StudentList::remove(string BNumber) {
-      int index = this->find(BNumber);
-      if (index == -1) {
-        return false;
-      }
-      for (int i = index; i < currentQuantity - 1; i++) {
-        array[i] = array[i + 1];
-      }
-      return true;
-    }
+//bool StudentList::remove(string BNumber) {
+ //     int index = this->find(BNumber);
+ //     if (index == -1) {
+ //       return false;
+ //     }
+ //     for (int i = index; i < currentQuantity - 1; i++) {
+ //       array[i] = array[i + 1];
+ //     }
+ //     return true;
+ //   }
   
 int StudentList::find(string BNumber) {
       for (int i = 0; i < currentQuantity; i++) {
