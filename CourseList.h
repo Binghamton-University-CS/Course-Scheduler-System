@@ -7,7 +7,7 @@ class CourseList {
   public:
     CourseList();
     ~CourseList();
-    bool add(Course course);
+    bool add(string CRN, string department, string number, string name);
     bool remove(string CRN);
     int find(string CRN);
     bool checkExists(string CRN);
