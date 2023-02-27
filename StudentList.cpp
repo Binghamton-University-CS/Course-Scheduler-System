@@ -17,8 +17,8 @@ StudentList::~StudentList() {
       delete[] array;
 }
   
-bool StudentList::add(Student student) {
-      if (this->find(student.getBNumber()) != -1) {
+bool StudentList::add(string BNumber, string userID, string first, string last) {
+      if (this->find(BNumber) != -1) {
         return false;
       }
       
