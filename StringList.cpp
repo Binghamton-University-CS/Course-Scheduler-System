@@ -9,6 +9,7 @@
 using namespace std;
 
 StringList::StringList() {
+      size = 1;
       currentQuantity = 0;
       array = new string*[size];
       for (int i = 0; i < size; i++) {
@@ -38,7 +39,7 @@ bool StringList::add(string s) {
         size *= 2;
       }
       currentQuantity++;
-      *array[currentQuantity] = s;
+      *(array[currentQuantity]) = s;
       return true;
     }
 
@@ -56,7 +57,7 @@ bool StringList::remove(string s) {
     
 int StringList::find(string s) {
       for (int i = 0; i < currentQuantity; i++) {
-        if (s == *array[i]) {
+        if (s == *(array[i])) {
           return i;
         }
       }
@@ -64,7 +65,7 @@ int StringList::find(string s) {
     }
 void StringList::printAll() {
       for (int i = 0; i < size; i++) {
-            cout << array[i] << endl;
+            cout << *(array[i]) << endl;
       }
 }
 
