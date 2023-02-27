@@ -13,7 +13,7 @@ class CourseList {
     bool checkExists(string CRN);
     Course* getCourse(string CRN);
   private:
-    int size = 1;
+    int size;
     int currentQuantity;
-    Course* array[size];
+    Course** array;
 };
