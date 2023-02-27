@@ -65,7 +65,7 @@ vector<string> getTokenListFromString(string input) {
 	for (unsigned int i = 0; i < input.size(); i++) {
 		if (isspace(input[i]) != 0) {
 			if (currentToken != "") {
-				tL.push_back(currentToken)
+				tL.push_back(currentToken);
 				currentToken = "";
 			}
 		}
