@@ -18,10 +18,10 @@ StringList::StringList() {
 }
 
 StringList::~StringList() {
-      for (int i = 0; i < currentQuantity; i++) {
-            delete array[i];
-      }
-      delete[] array;
+      //for (int i = 0; i < currentQuantity; i++) {
+       //     delete array[i];
+     // }
+      //delete[] array;
 }
 
 bool StringList::add(string s) {
