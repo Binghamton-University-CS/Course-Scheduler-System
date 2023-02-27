@@ -56,7 +56,7 @@ bool StudentList::remove(string BNumber) {
   
 int StudentList::find(string BNumber) {
       for (int i = 0; i < currentQuantity; i++) {
-        if (BNumber == array[i].getBNumber()) {
+        if ((*array[i])).getBNumber() == BNumber) {
           return i;
         }
       }
@@ -65,7 +65,7 @@ int StudentList::find(string BNumber) {
 
 bool StudentList::checkExists(string BNumber) {
       for (int i = 0; i < currentQuantity; i++) {
-            if (array[i].getBNumber() == BNumber) {
+            if ((*(array[i])).getBNumber() == BNumber) {
                   return true;
             }
       }
@@ -75,9 +75,9 @@ bool StudentList::checkExists(string BNumber) {
 Student* StudentList::getStudent(string BNumber) {
       for (int i = 0; i < currentQuantity; i++) {
             if (array[i].getBNumber() == BNumber) {
-                  return &array[i];
+                  return array[i];
             }
       }
       //only here to remove warning
-      return &array[0];
+      return array[0];
 }
