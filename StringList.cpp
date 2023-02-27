@@ -18,7 +18,7 @@ StringList::StringList() {
 }
 
 StringList::~StringList() {
-      for (int i = 0; i < size; i++) {
+      for (int i = 0; i < currentQuantity; i++) {
             delete array[i];
       }
       delete[] array;
