@@ -110,7 +110,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() >= 2) {
 			if (checkCRN(tL.at(1))) {
 				if (cL.remove(tL.at(1))) {
-					sL.removeAllCourse(tL.at(1));
+					sL.removeAllCourse(cL.getCourse(tL.at(1))->getString());
 					cout << "Success: cancelled course " << tL.at(1) << endl;
 				}
 				else {
