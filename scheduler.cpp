@@ -109,12 +109,11 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		checkExtraArguments(tL.size(), 2);
 		if (tL.size() >= 2) {
 			if (checkCRN(tL.at(1))) {
-				string courseString = cL.getCourse(tL.at(1))->getString();
-				bool removed = cL.remove(tL.at(1));
-				if (removed) {
+				if (cL.checkExists(tL.at(1))) {
+					string courseString = cL.getCourse(tL.at(1))->getString();
+					cL.remove(tL.at(1));
 					sL.removeAllCourse(courseString);
 					cout << "Success: cancelled course " << tL.at(1) << endl;
-				}
 				else {
 					cout << "Fail: cannot cancel course, CRN does not exist" << endl;
 				}
