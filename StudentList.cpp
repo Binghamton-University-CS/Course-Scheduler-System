@@ -31,7 +31,7 @@ bool StudentList::add(string BNumber, string userID, string first, string last) 
         for (int i_ = 0; i_ < size * 2; i_++) {
           temp[i_] = nullptr;
         }
-        for (int i = 0; i < currentQuantity - 1; i++) {
+        for (int i = 0; i < currentQuantity; i++) {
           temp[i] = array[i];
         }
         delete[] array;
