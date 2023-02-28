@@ -15,6 +15,7 @@ class Course {
     string dropStudent(string student);
     void printRoster();
     string getCRN();
+    string getString();
   private:
     string CRN;
     string department;
