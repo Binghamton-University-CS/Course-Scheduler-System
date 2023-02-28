@@ -192,4 +192,8 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		}
 		checkNotEnoughArguments(tL.size(), 2);
 	}
+	else {
+		checkExtraArguments(tL.size(), 1);
+		cout << "Input Error: command not recognized, please try again." << endl;
+	}
 }
