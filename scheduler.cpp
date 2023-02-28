@@ -171,9 +171,24 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.getCourse(tL.at(2))->dropStudent(sL.getStudent(tL.at(1))->getString());
-					sL.getStudent(tL.at(1))->removeCourse(cL.getCourse(tL.at(2))->getString());
-					cout << "Success: removed student " << tL.at(1) << " from course " << tL.at(2) << endl;
+					if (sL.checkExists(tL.at(1))) {
+						if (cL.checkExists(tL.at(2))) {
+							if (cL.getCourse(tL.at(2))->checkContainsStudent(sL.getStudent(tL.at(1))->getString()) == true) {
+								cL.getCourse(tL.at(2))->dropStudent(sL.getStudent(tL.at(1))->getString());
+								sL.getStudent(tL.at(1))->removeCourse(cL.getCourse(tL.at(2))->getString());
+								cout << "Success: removed student " << tL.at(1) << " from course " << tL.at(2) << endl;
+							}
+							else {
+								cout << "Fail: cannot drop, student " << tL.at(1) << " not enrolled in course " << tL.at(2) << endl;
+							}
+						}
+						else {
+							cout << "Fail: course does not exist" << endl;
+						}
+					}
+					else {
+						cout << "Fail: student does not exist" << endl;
+					}
 				}
 			}
 		}
