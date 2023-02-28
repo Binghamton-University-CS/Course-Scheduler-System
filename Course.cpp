@@ -44,3 +44,10 @@ string Course::getCRN() {
 string Course::getString() {
       return CRN + " " + department + " " + number + " " + name;
 }
+
+bool Course::checkContainsStudent(string student) {
+      if (studentList.find(student) == -1) {
+            return false;
+      }
+      return true;
+}
