@@ -84,6 +84,6 @@ Student* StudentList::getStudent(string BNumber) {
 
 void StudentList::removeAllCourse(string course) {
       for (int i = 0; i < currentQuantity; i++) {
-            (*(array[i])).removeCourse(course)) {
+            (*(array[i])).removeCourse(course);
       }
 }
