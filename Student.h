@@ -15,6 +15,7 @@ class Student {
     void removeCourse(string course);
     void printSchedule();
     string getBNumber();
+    string getString();
   private:
     string BNumber;
     string userID;
