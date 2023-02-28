@@ -37,3 +37,7 @@ void Student::printSchedule() {
 string Student::getBNumber() {
       return BNumber;
 }
+
+string Student::getString() {
+      return BNumber + " " + first + " " + last;
+}
