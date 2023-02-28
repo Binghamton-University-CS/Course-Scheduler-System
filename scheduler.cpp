@@ -140,7 +140,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	}
 	else if (tL.at(0) == "add") {
 		checkExtraArguments(tL.size(), 3);
-		if (tL.size() == 3) {
+		if (tL.size() >= 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
 					if (sL.checkExists(tL.at(1))) {
@@ -168,7 +168,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	}
 	else if (tL.at(0) == "drop") {
 		checkExtraArguments(tL.size(), 3);
-		if (tL.size() == 3) {
+		if (tL.size() >= 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
 					if (sL.checkExists(tL.at(1))) {
@@ -196,7 +196,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	}
 	else if (tL.at(0) == "roster") {
 		checkExtraArguments(tL.size(), 2);
-		if (tL.size() == 2) {
+		if (tL.size() >= 2) {
 			if (checkCRN(tL.at(1))) {
 				if (cL.checkExists(tL.at(1))) {
 					cL.getCourse(tL.at(1))->printRoster();
@@ -210,7 +210,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 	}
 	else if (tL.at(0) == "schedule") {
 		checkExtraArguments(tL.size(), 2);
-		if (tL.size() == 2) {
+		if (tL.size() >= 2) {
 			if (checkBNumber(tL.at(1))) {
 				if (sL.checkExists(tL.at(1))) {
 					sL.getStudent(tL.at(1))->printSchedule();
