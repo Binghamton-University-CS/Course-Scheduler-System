@@ -16,6 +16,7 @@ class Course {
     void printRoster();
     string getCRN();
     string getString();
+    bool checkContainsStudent(string student);
   private:
     string CRN;
     string department;
