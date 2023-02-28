@@ -42,5 +42,5 @@ string Course::getCRN() {
 }
 
 string Course::getString() {
-      return CRN + " " + department + " " + number + " " name;
+      return CRN + " " + department + " " + number + " " + name;
 }
