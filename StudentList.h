@@ -12,6 +12,7 @@ class StudentList {
     int find(string BNumber);
     bool checkExists(string BNumber);
     Student* getStudent(string BNumber);
+    void removeAllCourse(string course);
   private:
     int size;
     int currentQuantity;
