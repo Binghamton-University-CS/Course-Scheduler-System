@@ -30,7 +30,7 @@ void Student::removeCourse(string course) {
       courseList.remove(course);
     }
 void Student::printSchedule() {
-      cout << "Student: " << BNumber << ": " << first;
+      cout << "Student: " << BNumber << ": " << first << endl;
       courseList.printAll();
     }
 
