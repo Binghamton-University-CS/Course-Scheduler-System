@@ -40,3 +40,7 @@ void Course::printRoster() {
 string Course::getCRN() {
       return CRN;
 }
+
+string Course::getString() {
+      return CRN + " " + department + " " + number + " " name;
+}
