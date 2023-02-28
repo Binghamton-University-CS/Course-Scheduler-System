@@ -140,7 +140,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.getCourse(tL.at(2))->addStudent(tL.at(1));
+					cL.getCourse(tL.at(2))->addStudent(sL.getStudent(tL.at(1))->getString());
 					cout << "Success: added student " << tL.at(1) << " into course " << tL.at(2) << endl;
 				}
 			}
@@ -152,7 +152,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.getCourse(tL.at(2))->dropStudent(tL.at(1));
+					cL.getCourse(tL.at(2))->dropStudent(sL.getStudent(tL.at(1))->getString());
 					cout << "Success: removed student " << tL.at(1) << " from course " << tL.at(2) << endl;
 				}
 			}
