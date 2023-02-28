@@ -114,6 +114,7 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 					cL.remove(tL.at(1));
 					sL.removeAllCourse(courseString);
 					cout << "Success: cancelled course " << tL.at(1) << endl;
+				}
 				else {
 					cout << "Fail: cannot cancel course, CRN does not exist" << endl;
 				}
