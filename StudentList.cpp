@@ -81,3 +81,11 @@ Student* StudentList::getStudent(string BNumber) {
       //only here to remove warning
       return array[0];
 }
+
+void StudentList::removeAllCourse(string CRN) {
+      for (int i = 0; i < currentQuantity; i++) {
+            if ((*(array[i])).containsCourse(CRN)) {
+                  ; //
+            }
+      }
+}
