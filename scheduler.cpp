@@ -143,9 +143,24 @@ void processInputAndPrint(vector<string> tL, CourseList& cL, StudentList& sL) {
 		if (tL.size() == 3) {
 			if (checkBNumber(tL.at(1))) {
 				if (checkCRN(tL.at(2))) {
-					cL.getCourse(tL.at(2))->addStudent(sL.getStudent(tL.at(1))->getString());
-					sL.getStudent(tL.at(1))->addCourse(cL.getCourse(tL.at(2))->getString());
-					cout << "Success: added student " << tL.at(1) << " into course " << tL.at(2) << endl;
+					if (cL.checkExists(tL.at(2))) {
+						if (sL.checkExists(tL.at(1))) {
+							if (cL.getCourse(tL.at(2))->checkContainsStudent(sL.getStudent(tL.at(1))->getString()) == false) {
+								cL.getCourse(tL.at(2))->addStudent(sL.getStudent(tL.at(1))->getString());
+								sL.getStudent(tL.at(1))->addCourse(cL.getCourse(tL.at(2))->getString());
+								cout << "Success: added student " << tL.at(1) << " into course " << tL.at(2) << endl;
+							}
+							else {
+								cout << "Fail: cannot add, student " << tL.at(1) << " already enrolled in course " << tL.at(2) << endl;
+							}
+						}
+						else {
+							cout << "Fail: student does not exist" << endl;
+						}
+					}
+					else {
+						cout << "Fail: course does not exist" << endl;
+					}
 				}
 			}
 		}
